@@ -1,0 +1,69 @@
+/* styles/somatic-container.css */
+:root {
+  --bg-near-black: #020501;      /* Primary background anchor; absorbs glare */
+  --container-deep-green: #153009;/* Structural container base; organic sanctuary */
+  --bg-forest-accent: #0A1D08;    /* Deep background layering depth */
+  --border-grindstone: #3E6830;   /* Interactive boundaries & card dividers */
+  --accent-antique-gold: #CBB26A; /* High-tier text accent signaling clinical warmth */
+  --beacon-somatic-gold: #D3B127; /* High-contrast primary conversion beacon */
+  --text-pale-slate: #C0BFBC;     /* Primary body text; eliminates halation */
+  --text-somatic-ice: #CCDEE0;    /* Focus states & secondary highlights */
+}
+
+body {
+  background-color: var(--bg-near-black);
+  color: var(--text-pale-slate);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Primary Conversion Beacon */
+.btn-somatic-primary {
+  background-color: var(--beacon-somatic-gold);
+  color: var(--bg-near-black);
+  font-weight: 700;
+  border: none;
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-somatic-primary:hover {
+  background-color: var(--accent-antique-gold);
+  box-shadow: 0 0 16px rgba(203, 178, 106, 0.35);
+}
+
+/* Secondary Action Buttons */
+.btn-somatic-secondary {
+  background-color: transparent;
+  color: var(--text-somatic-ice);
+  border: 1px solid var(--accent-antique-gold);
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-somatic-secondary:hover {
+  background-color: var(--bg-forest-accent);
+}
+
+/* Structural Sanctuary Cards */
+.somatic-card {
+  background-color: var(--container-deep-green);
+  border: 1px solid var(--border-grindstone);
+  padding: 1.5rem;
+}
+
+/* Outlaw Callout Container */
+.outlaw-callout {
+  background-color: var(--bg-forest-accent);
+  border-left: 4px solid var(--beacon-somatic-gold);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}

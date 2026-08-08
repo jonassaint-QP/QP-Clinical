@@ -1,0 +1,59 @@
+/* styles/somatic-theme.css */
+:root {
+  /* Master Somatic Palette */
+  --bg-near-black: #020501;      /* Primary background anchor; absorbs glare */
+  --container-deep-green: #153009;/* Structural card framing & sanctuary containers */
+  --bg-forest-accent: #0A1D08;    /* Deep background layering */
+  --border-grindstone: #3E6830;   /* Interactive boundaries and card dividers */
+  --accent-antique-gold: #CBB26A; /* High-tier text accent & secondary CTAs */
+  --beacon-somatic-gold: #D3B127; /* High-contrast conversion beacon */
+  --text-pale-slate: #C0BFBC;     /* Fatigue-free primary body text */
+  --text-somatic-ice: #CCDEE0;    /* Secondary highlights & focus states */
+}
+
+body {
+  background-color: var(--bg-near-black);
+  color: var(--text-pale-slate);
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Primary Conversion CTA */
+.btn-somatic-primary {
+  background-color: var(--beacon-somatic-gold);
+  color: var(--bg-near-black);
+  font-weight: 700;
+  border: none;
+  padding: 0.875rem 1.75rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-somatic-primary:hover {
+  background-color: var(--accent-antique-gold);
+  box-shadow: 0 0 16px rgba(203, 178, 106, 0.35);
+}
+
+/* Secondary Actions */
+.btn-somatic-secondary {
+  background-color: transparent;
+  color: var(--text-somatic-ice);
+  border: 1px solid var(--accent-antique-gold);
+  padding: 0.875rem 1.75rem;
+  cursor: pointer;
+}
+
+/* Structural Cards */
+.somatic-card {
+  background-color: var(--container-deep-green);
+  border: 1px solid var(--border-grindstone);
+  padding: 1.5rem;
+}
+
+/* Outlaw Callout Blocks */
+.outlaw-callout {
+  background-color: var(--bg-forest-accent);
+  border-left: 4px solid var(--beacon-somatic-gold);
+  padding: 1.5rem;
+}
