@@ -25,7 +25,7 @@ export function InteriorPage({
 }: InteriorPageProps) {
   return (
     <ClinicalShell title={title} description={description}>
-      <main className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
+      <div className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
         <header className="mb-12 border-l-4 border-[#D3B127] bg-[#0A1D08] p-6 sm:p-8">
           <p className="mb-3 text-xs font-bold uppercase text-[#D3B127]">{eyebrow}</p>
           <h1 className="mb-5 text-3xl font-extrabold tracking-normal text-[#CBB26A] sm:text-4xl">{title}</h1>
@@ -50,7 +50,7 @@ export function InteriorPage({
             Adjourn the Courtroom — Book Your Intake Assessment
           </a>
         </aside>
-      </main>
+      </div>
     </ClinicalShell>
   );
 }

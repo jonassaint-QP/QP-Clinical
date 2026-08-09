@@ -70,12 +70,9 @@ const requiredLandingContent = [
   'Everyone thinks I\'m doing fine... but the truth is I\'m not alright.',
   'Ambiguity Tax',
   '/images/217059319_padded_logo.png',
-  'Queer Pathways Gold Centaur Emblem',
   'Queer Pathways Gold Centaur Archer Logo',
-  'Client Portal',
   'Open Secure Booking Portal',
   'https://www.therapyportal.com/p/queercharts/',
-  "window.open('https://queerpathways.com', '_blank', 'noopener,noreferrer')",
   'target="_blank"',
   'rel="noopener noreferrer"',
   'id="therapy-notes-widget"',
@@ -91,6 +88,32 @@ const requiredLandingContent = [
 
 for (const required of requiredLandingContent) {
   if (!landing.includes(required)) failures.push(`pages/index.tsx: missing required content: ${required}`);
+}
+
+const clinicalShell = readFileSync(join(root, 'components/ClinicalShell.tsx'), 'utf8');
+for (const required of [
+  'Queer Pathways Gold Centaur Archer Emblem',
+  'Client Portal',
+  'Supervision',
+  'https://blog.queerpathways.org',
+  'Skip to main content',
+  'id="main-content"',
+  "window.open('https://queerpathways.com', '_blank', 'noopener,noreferrer')",
+]) {
+  if (!clinicalShell.includes(required)) failures.push(`components/ClinicalShell.tsx: missing shared requirement: ${required}`);
+}
+
+const requiredPageContent = new Map([
+  ['pages/philosophy.tsx', ["WE DON'T BELIEVE IN BROKEN", 'The Double-Outsider Framework', 'The Internal Courtroom', 'The Ambiguity Tax', 'What We Offer Instead']],
+  ['pages/services.tsx', ['THREE PATHWAYS. ONE RADICAL PREMISE.', 'Specialist Scaffolding', 'Relational Sovereignty', 'Gender Story Prep', 'DIGNITY INVESTMENT PRICING', '+1 (365) 599-9002']],
+  ['pages/consultation.tsx', ['SUPERVISION: THE DBT CONSULTATION GROUP', 'The Focus', 'Format & Investment', '$75 USD / $100 CAD per session', 'Joshua@QueerPathways.org']],
+]);
+
+for (const [pagePath, requirements] of requiredPageContent) {
+  const pageSource = readFileSync(join(root, pagePath), 'utf8');
+  for (const required of requirements) {
+    if (!pageSource.includes(required)) failures.push(`${pagePath}: missing required content: ${required}`);
+  }
 }
 
 const requiredRoutes = [
@@ -134,6 +157,28 @@ const modal = readFileSync(join(root, 'components/LeavesSiteModal.tsx'), 'utf8')
 const requiredModalCopy = "You're leaving the Queer Pathways clinical portal and heading to our retail storefront at";
 if (!modal.includes(requiredModalCopy) || !modal.includes('Your clinical data stays here. Browse freely.')) {
   failures.push('components/LeavesSiteModal.tsx: required clinical-to-retail boundary copy is missing');
+}
+
+for (const required of ["event.key !== 'Tab'", 'element.inert = true', "element.setAttribute('aria-hidden', 'true')"]) {
+  if (!modal.includes(required)) failures.push(`components/LeavesSiteModal.tsx: missing modal accessibility requirement: ${required}`);
+}
+
+const documentSource = readFileSync(join(root, 'pages/_document.tsx'), 'utf8');
+if (!documentSource.includes('<Html lang="en">')) {
+  failures.push('pages/_document.tsx: document language must be English');
+}
+
+const netlifyConfig = readFileSync(join(root, 'netlify.toml'), 'utf8');
+for (const required of [
+  '@netlify/plugin-nextjs',
+  'Content-Security-Policy',
+  'Strict-Transport-Security',
+  'X-Frame-Options',
+  'X-Content-Type-Options',
+  'Referrer-Policy',
+  'Permissions-Policy',
+]) {
+  if (!netlifyConfig.includes(required)) failures.push(`netlify.toml: missing deployment security requirement: ${required}`);
 }
 
 if (existsSync(join(root, 'netlify/functions'))) {

@@ -12,6 +12,7 @@ export function LeavesSiteModal({
   onClose,
   onConfirm,
 }: LeavesSiteModalProps) {
+  const modalRef = useRef<HTMLDivElement>(null);
   const stayButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -19,11 +20,52 @@ export function LeavesSiteModal({
 
     const previouslyFocused = document.activeElement as HTMLElement | null;
     const previousOverflow = document.body.style.overflow;
+    const overlay = modalRef.current?.parentElement;
+    const backgroundElements = overlay?.parentElement
+      ? Array.from(overlay.parentElement.children).filter(
+          (element): element is HTMLElement => element instanceof HTMLElement && element !== overlay,
+        )
+      : [];
+    const backgroundState = backgroundElements.map((element) => ({
+      element,
+      inert: element.inert,
+      ariaHidden: element.getAttribute('aria-hidden'),
+    }));
+
+    for (const element of backgroundElements) {
+      element.inert = true;
+      element.setAttribute('aria-hidden', 'true');
+    }
+
     document.body.style.overflow = 'hidden';
     stayButtonRef.current?.focus();
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onClose();
+      if (event.key === 'Escape') {
+        onClose();
+        return;
+      }
+
+      if (event.key !== 'Tab' || !modalRef.current) return;
+
+      const focusableElements = modalRef.current.querySelectorAll<HTMLElement>(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      );
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+
+      if (!firstElement || !lastElement) {
+        event.preventDefault();
+        return;
+      }
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -31,6 +73,11 @@ export function LeavesSiteModal({
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = previousOverflow;
+      for (const { element, inert, ariaHidden } of backgroundState) {
+        element.inert = inert;
+        if (ariaHidden === null) element.removeAttribute('aria-hidden');
+        else element.setAttribute('aria-hidden', ariaHidden);
+      }
       previouslyFocused?.focus();
     };
   }, [isOpen, onClose]);
@@ -45,6 +92,7 @@ export function LeavesSiteModal({
       }}
     >
       <div
+        ref={modalRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="leaves-site-title"

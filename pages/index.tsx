@@ -1,12 +1,9 @@
 // pages/index.tsx
-import React, { useState } from 'react';
-import Head from 'next/head';
+import React from 'react';
 import Image from 'next/image';
-import { LeavesSiteModal } from '../components/LeavesSiteModal';
+import { ClinicalShell } from '../components/ClinicalShell';
 
 export default function LandingPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   const scrollToBookingWidget = () => {
     const widgetElement = document.getElementById('therapy-notes-widget');
     if (widgetElement) {
@@ -14,70 +11,12 @@ export default function LandingPage() {
     }
   };
 
-  const handleShopClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setIsModalOpen(true);
-  };
-
-  const handleConfirmRedirect = () => {
-    setIsModalOpen(false);
-    window.open('https://queerpathways.com', '_blank', 'noopener,noreferrer');
-  };
-
   return (
-    <>
-      <Head>
-        <title>Queer Pathways | Somatic Telehealth for the Double-Outsider</title>
-        <meta
-          name="description"
-          content="Cross-border somatic telehealth for neurodivergent, non-binary, and 2SLGBTQI+ professionals in Pennsylvania and Ontario."
-        />
-      </Head>
-
-      <div className="min-h-screen bg-[#020501] text-[#C0BFBC] font-sans antialiased selection:bg-[#3E6830] selection:text-[#CCDEE0]">
-        {/* Navigation Header with Centaur Emblem Logo */}
-        <header className="sticky top-0 z-40 border-b border-[#3E6830] bg-[#153009]/80 backdrop-blur-md">
-          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 p-4">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/images/217059319_padded_logo.png"
-                alt="Queer Pathways Gold Centaur Emblem"
-                width={40}
-                height={40}
-                className="h-10 w-auto object-contain"
-                priority
-              />
-              <span className="text-xl font-bold tracking-wider text-[#CBB26A]">
-                QUEER PATHWAYS
-              </span>
-            </div>
-            <nav aria-label="Primary navigation" className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium">
-              <a href="/services" className="text-[#CCDEE0] transition-colors hover:text-[#CBB26A]">Services</a>
-              <a href="/philosophy" className="text-[#CCDEE0] transition-colors hover:text-[#CBB26A]">Philosophy</a>
-              <a href="/consultation" className="text-[#CCDEE0] transition-colors hover:text-[#CBB26A]">Peer Circle</a>
-              <a
-                href="https://www.therapyportal.com/p/queercharts/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#CCDEE0] transition-colors hover:text-[#CBB26A]"
-              >
-                Client Portal
-              </a>
-              <a
-                href="https://queerpathways.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={handleShopClick}
-                className="font-semibold text-[#D3B127] hover:underline"
-              >
-                Storefront
-              </a>
-            </nav>
-          </div>
-        </header>
-
-        {/* Hero Grounding Threshold */}
-        <main className="mx-auto max-w-5xl px-4 py-20 text-center">
+    <ClinicalShell
+      title="Queer Pathways | Somatic Telehealth for the Double-Outsider"
+      description="Cross-border somatic telehealth for neurodivergent, non-binary, and 2SLGBTQI+ professionals in Pennsylvania and Ontario."
+    >
+        <div className="mx-auto max-w-5xl px-4 py-16 text-center">
           <div className="mb-6 flex justify-center">
             <Image
               src="/images/217059319_padded_logo.png"
@@ -116,19 +55,19 @@ export default function LandingPage() {
           {/* Bespoke Standards of Care Cards */}
           <section className="my-16 grid gap-6 text-left md:grid-cols-3">
             <div className="border border-[#3E6830] bg-[#153009] p-6 shadow-xl">
-              <h3 className="mb-3 text-xl font-bold text-[#CBB26A]">Executive Burnout & RSD</h3>
+              <h2 className="mb-3 text-xl font-bold text-[#CBB26A]">Executive Burnout & RSD</h2>
               <p className="text-sm leading-relaxed text-[#C0BFBC]">
                 Somatic scaffolding engineered to regulate executive dysfunction and dismantle the Internal Auditor without forcing neuronormative masking.
               </p>
             </div>
             <div className="border border-[#3E6830] bg-[#153009] p-6 shadow-xl">
-              <h3 className="mb-3 text-xl font-bold text-[#CBB26A]">Relational Sovereignty</h3>
+              <h2 className="mb-3 text-xl font-bold text-[#CBB26A]">Relational Sovereignty</h2>
               <p className="text-sm leading-relaxed text-[#C0BFBC]">
                 Kink-fluent, poly-affirming, and attachment-focused therapy that eliminates the "Ambiguity Tax" for non-traditional relational architectures.
               </p>
             </div>
             <div className="border border-[#3E6830] bg-[#153009] p-6 shadow-xl">
-              <h3 className="mb-3 text-xl font-bold text-[#CBB26A]">Gender Story Prep</h3>
+              <h2 className="mb-3 text-xl font-bold text-[#CBB26A]">Gender Story Prep</h2>
               <p className="text-sm leading-relaxed text-[#C0BFBC]">
                 Zero-gatekeeping medical navigation and narrative integration for trans, non-binary, and gender-expansive visionaries.
               </p>
@@ -143,22 +82,22 @@ export default function LandingPage() {
             <p className="mb-6 text-center text-xs text-[#CCDEE0]">Rates locked through March 30, 2027</p>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="border border-[#3E6830] bg-[#0A1D08] p-6 text-center">
-                <h4 className="font-bold text-[#CBB26A]">Intake Assessment</h4>
+                <h3 className="font-bold text-[#CBB26A]">Intake Assessment</h3>
                 <span className="text-2xl font-extrabold text-[#D3B127]">$225</span>
                 <p className="mt-1 text-xs text-[#C0BFBC]">90 Minutes</p>
               </div>
               <div className="border border-[#3E6830] bg-[#0A1D08] p-6 text-center">
-                <h4 className="font-bold text-[#CBB26A]">Individual Therapy</h4>
+                <h3 className="font-bold text-[#CBB26A]">Individual Therapy</h3>
                 <span className="text-2xl font-extrabold text-[#D3B127]">$150</span>
                 <p className="mt-1 text-xs text-[#C0BFBC]">50 Minutes</p>
               </div>
               <div className="border border-[#3E6830] bg-[#0A1D08] p-6 text-center">
-                <h4 className="font-bold text-[#CBB26A]">Relationship Therapy</h4>
+                <h3 className="font-bold text-[#CBB26A]">Relationship Therapy</h3>
                 <span className="text-2xl font-extrabold text-[#D3B127]">$200</span>
                 <p className="mt-1 text-xs text-[#C0BFBC]">50 Minutes</p>
               </div>
               <div className="border border-[#3E6830] bg-[#0A1D08] p-6 text-center">
-                <h4 className="font-bold text-[#CBB26A]">Coaching Masterclass</h4>
+                <h3 className="font-bold text-[#CBB26A]">Coaching Masterclass</h3>
                 <span className="text-2xl font-extrabold text-[#D3B127]">$150 / $200</span>
                 <p className="mt-1 text-xs text-[#C0BFBC]">1 Hr / 2 Hr (Billed in CAD for ON)</p>
               </div>
@@ -189,41 +128,7 @@ export default function LandingPage() {
               </div>
             </div>
           </section>
-        </main>
-
-        {/* Footer System with Strict Physical Address Exclusion */}
-        <footer className="mt-20 border-t border-[#3E6830] bg-[#0A1D08] py-8 text-center text-xs text-[#C0BFBC]">
-          <div className="mx-auto max-w-7xl px-4 space-y-3">
-            <p className="text-[#CCDEE0]">
-              Queer Pathways Telehealth • Dual Jurisdiction Pennsylvania (CW023073) & Ontario (RSW 842649)
-            </p>
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[#CBB26A]">
-              <a href="/terms" className="hover:underline">Terms of Service</a>
-              <a href="/privacy" className="hover:underline">Notice of Privacy Practices</a>
-              <a href="/gfe" className="hover:underline">Good Faith Estimate</a>
-              <a href="/phipa-addendum" className="hover:underline">PHIPA Addendum</a>
-              <a href="/memoir-disclaimer" className="hover:underline">Memoir Disclaimer</a>
-            </div>
-            <nav aria-label="Resources" className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[#CCDEE0]">
-              <a href="/philly-queer-therapy" className="hover:text-[#CBB26A]">Pennsylvania</a>
-              <a href="/toronto-queer-therapy" className="hover:text-[#CBB26A]">Ontario</a>
-              <a href="/resources/adhd-survival-guide" className="hover:text-[#CBB26A]">ADHD Survival Guide</a>
-              <a href="/resources/glossary" className="hover:text-[#CBB26A]">Glossary</a>
-              <a href="/resources/thriving-ten-rules" className="hover:text-[#CBB26A]">The Thriving Ten</a>
-            </nav>
-            <p className="text-[10px] text-[#C0BFBC]/70">
-              Operational Sovereignty Notice: Practice operates strictly via encrypted telehealth. Zero public physical practice addresses are maintained.
-            </p>
-          </div>
-        </footer>
-
-        {/* Security Gateway Modal */}
-        <LeavesSiteModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          onConfirm={handleConfirmRedirect}
-        />
-      </div>
-    </>
+        </div>
+    </ClinicalShell>
   );
 }
