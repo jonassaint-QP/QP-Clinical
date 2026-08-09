@@ -67,8 +67,15 @@ const landingPath = join(root, 'pages/index.tsx');
 const landing = readFileSync(landingPath, 'utf8');
 const requiredLandingContent = [
   'Adjourn the Courtroom — Book Your Intake Assessment',
+  'Everyone thinks I\'m doing fine... but the truth is I\'m not alright.',
+  'Ambiguity Tax',
+  '/images/217059319_padded_logo.png',
+  'Queer Pathways Gold Centaur Emblem',
+  'Queer Pathways Gold Centaur Archer Logo',
+  'Client Portal',
   'Open Secure Booking Portal',
   'https://www.therapyportal.com/p/queercharts/',
+  "window.open('https://queerpathways.com', '_blank', 'noopener,noreferrer')",
   'target="_blank"',
   'rel="noopener noreferrer"',
   'id="therapy-notes-widget"',
@@ -109,6 +116,10 @@ for (const route of requiredRoutes) {
 
 for (const publicFile of ['public/robots.txt', 'public/sitemap.xml']) {
   if (!existsSync(join(root, publicFile))) failures.push(`${publicFile}: required crawl asset is missing`);
+}
+
+if (!existsSync(join(root, 'public/images/217059319_padded_logo.png'))) {
+  failures.push('public/images/217059319_padded_logo.png: required Centaur emblem is missing');
 }
 
 const interiorPage = readFileSync(join(root, 'components/InteriorPage.tsx'), 'utf8');

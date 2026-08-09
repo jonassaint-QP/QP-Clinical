@@ -1,6 +1,7 @@
 // pages/index.tsx
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import { LeavesSiteModal } from '../components/LeavesSiteModal';
 
 export default function LandingPage() {
@@ -20,7 +21,7 @@ export default function LandingPage() {
 
   const handleConfirmRedirect = () => {
     setIsModalOpen(false);
-    window.location.href = 'https://queerpathways.com';
+    window.open('https://queerpathways.com', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -34,26 +35,62 @@ export default function LandingPage() {
       </Head>
 
       <div className="min-h-screen bg-[#020501] text-[#C0BFBC] font-sans antialiased selection:bg-[#3E6830] selection:text-[#CCDEE0]">
-        {/* Navigation Header */}
+        {/* Navigation Header with Centaur Emblem Logo */}
         <header className="sticky top-0 z-40 border-b border-[#3E6830] bg-[#153009]/80 backdrop-blur-md">
           <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 p-4">
-            <span className="text-xl font-bold tracking-wider text-[#CBB26A]">
-              QUEER PATHWAYS
-            </span>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/217059319_padded_logo.png"
+                alt="Queer Pathways Gold Centaur Emblem"
+                width={40}
+                height={40}
+                className="h-10 w-auto object-contain"
+                priority
+              />
+              <span className="text-xl font-bold tracking-wider text-[#CBB26A]">
+                QUEER PATHWAYS
+              </span>
+            </div>
             <nav aria-label="Primary navigation" className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium">
               <a href="/services" className="text-[#CCDEE0] transition-colors hover:text-[#CBB26A]">Services</a>
               <a href="/philosophy" className="text-[#CCDEE0] transition-colors hover:text-[#CBB26A]">Philosophy</a>
               <a href="/consultation" className="text-[#CCDEE0] transition-colors hover:text-[#CBB26A]">Peer Circle</a>
-              <a href="/shop" onClick={handleShopClick} className="font-semibold text-[#D3B127] hover:underline">Storefront</a>
+              <a
+                href="https://www.therapyportal.com/p/queercharts/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#CCDEE0] transition-colors hover:text-[#CBB26A]"
+              >
+                Client Portal
+              </a>
+              <a
+                href="https://queerpathways.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleShopClick}
+                className="font-semibold text-[#D3B127] hover:underline"
+              >
+                Storefront
+              </a>
             </nav>
           </div>
         </header>
 
         {/* Hero Grounding Threshold */}
         <main className="mx-auto max-w-5xl px-4 py-20 text-center">
+          <div className="mb-6 flex justify-center">
+            <Image
+              src="/images/217059319_padded_logo.png"
+              alt="Queer Pathways Gold Centaur Archer Logo"
+              width={160}
+              height={160}
+              className="h-32 w-auto object-contain"
+              priority
+            />
+          </div>
           <div className="mb-8 border-l-4 border-[#D3B127] bg-[#0A1D08] p-6 text-left shadow-lg">
             <p className="text-lg italic text-[#CCDEE0]">
-              "I tell myself I'm doing fine... but the truth is I'm not alright."
+              "Everyone thinks I'm doing fine... but the truth is I'm not alright."
             </p>
           </div>
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-[#CBB26A] sm:text-5xl">
@@ -87,7 +124,7 @@ export default function LandingPage() {
             <div className="border border-[#3E6830] bg-[#153009] p-6 shadow-xl">
               <h3 className="mb-3 text-xl font-bold text-[#CBB26A]">Relational Sovereignty</h3>
               <p className="text-sm leading-relaxed text-[#C0BFBC]">
-                Kink-fluent, poly-affirming, and attachment-focused therapy that eliminates the "Explanation Tax" for non-traditional relational architectures.
+                Kink-fluent, poly-affirming, and attachment-focused therapy that eliminates the "Ambiguity Tax" for non-traditional relational architectures.
               </p>
             </div>
             <div className="border border-[#3E6830] bg-[#153009] p-6 shadow-xl">
