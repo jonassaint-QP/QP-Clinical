@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { extname, join, relative, resolve } from 'node:path';
+import sharp from 'sharp';
 
 const root = resolve(import.meta.dirname, '..');
 const sourceRoots = ['pages', 'components', 'styles'];
@@ -141,8 +142,20 @@ for (const publicFile of ['public/robots.txt', 'public/sitemap.xml']) {
   if (!existsSync(join(root, publicFile))) failures.push(`${publicFile}: required crawl asset is missing`);
 }
 
-if (!existsSync(join(root, 'public/images/217059319_padded_logo.png'))) {
+const emblemPath = join(root, 'public/images/217059319_padded_logo.png');
+if (!existsSync(emblemPath)) {
   failures.push('public/images/217059319_padded_logo.png: required Centaur emblem is missing');
+} else {
+  const metadata = await sharp(emblemPath).metadata();
+  const { channels } = await sharp(emblemPath).stats();
+  const alphaChannel = channels[3];
+
+  if (metadata.width !== 1000 || metadata.height !== 1000) {
+    failures.push('public/images/217059319_padded_logo.png: Centaur emblem must remain 1000x1000');
+  }
+  if (!metadata.hasAlpha || !alphaChannel || alphaChannel.min === 255) {
+    failures.push('public/images/217059319_padded_logo.png: Centaur emblem must contain real transparent pixels');
+  }
 }
 
 const interiorPage = readFileSync(join(root, 'components/InteriorPage.tsx'), 'utf8');
