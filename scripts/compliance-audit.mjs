@@ -104,6 +104,16 @@ for (const required of [
   if (!clinicalShell.includes(required)) failures.push(`components/ClinicalShell.tsx: missing shared requirement: ${required}`);
 }
 
+const appSource = readFileSync(join(root, 'pages/_app.tsx'), 'utf8');
+for (const required of [
+  "router.asPath.split(/[?#]/, 1)",
+  "pathWithoutQueryOrFragment.replace(/\\/+$/, '')",
+  'https://queerpathways.org${canonicalPath}',
+  '<link key="canonical" rel="canonical" href={canonicalUrl} />',
+]) {
+  if (!appSource.includes(required)) failures.push(`pages/_app.tsx: missing canonical URL requirement: ${required}`);
+}
+
 const requiredPageContent = new Map([
   ['pages/philosophy.tsx', ["WE DON'T BELIEVE IN BROKEN", 'The Double-Outsider Framework', 'The Internal Courtroom', 'The Ambiguity Tax', 'What We Offer Instead']],
   ['pages/services.tsx', ['THREE PATHWAYS. ONE RADICAL PREMISE.', 'Specialist Scaffolding', 'Relational Sovereignty', 'Gender Story Prep', 'DIGNITY INVESTMENT PRICING', '+1 (365) 599-9002']],
