@@ -25,6 +25,18 @@ Repository: `jonassaint-QP/QP-Clinical`
 5. Confirm the TherapyPortal button targets `https://www.therapyportal.com/p/queercharts/` in a new tab.
 6. Confirm production HTML contains no `iframe`; TherapyPortal blocks third-party framing through its `frame-ancestors` policy.
 
+### ADHD Survival Card automation
+
+Set these variables in the Netlify production environment before publishing the resource route:
+
+- `LEAD_CAPTURE_WEBHOOK_URL`: HTTPS endpoint for the newsletter and resource-delivery automation.
+- `LEAD_CAPTURE_WEBHOOK_SECRET`: optional bearer token used to authenticate webhook calls.
+- `ADHD_SURVIVAL_CARD_PDF_URL`: public CDN URL for the final PDF attachment.
+
+The webhook receives the normalized email, jurisdiction, consent record, PDF URL, and tags. Ontario submissions include `ontario-warm-referral-pool`; all valid submissions include `newsletter` and `adhd-survival-card`. Confirm the automation sends the PDF link, applies the supplied tags, preserves the consent timestamp, and handles unsubscribe requests before enabling campaign traffic.
+
+After deployment, submit one test for each jurisdiction and confirm the browser returns to `/resources/adhd-survival-card?status=sent`. Missing configuration or an unsuccessful webhook response returns `?status=error` without exposing service details.
+
 ## 2. Retail Storefront: queerpathways.com
 
 Repository: `jonassaint-QP/QueerPathways`

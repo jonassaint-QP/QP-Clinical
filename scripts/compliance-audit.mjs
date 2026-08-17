@@ -140,6 +140,7 @@ const requiredRoutes = [
   'memoir-disclaimer.tsx',
   'shop.tsx',
   'resources/adhd-survival-guide.tsx',
+  'resources/adhd-survival-card.tsx',
   'resources/glossary.tsx',
   'resources/thriving-ten-rules.tsx',
 ];

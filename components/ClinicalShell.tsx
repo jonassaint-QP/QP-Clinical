@@ -107,6 +107,7 @@ export function ClinicalShell({
             <Link href="/philly-queer-therapy" className="hover:text-[#CBB26A]">Pennsylvania</Link>
             <Link href="/toronto-queer-therapy" className="hover:text-[#CBB26A]">Ontario</Link>
             <Link href="/resources/adhd-survival-guide" className="hover:text-[#CBB26A]">ADHD Survival Guide</Link>
+            <Link href="/resources/adhd-survival-card" className="hover:text-[#CBB26A]">ADHD Survival Card</Link>
             <Link href="/resources/glossary" className="hover:text-[#CBB26A]">Glossary</Link>
             <Link href="/resources/thriving-ten-rules" className="hover:text-[#CBB26A]">The Thriving Ten</Link>
           </nav>
