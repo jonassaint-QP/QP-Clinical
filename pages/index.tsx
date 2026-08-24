@@ -40,7 +40,7 @@ export default function LandingPage() {
           </p>
 
           <div className="mb-8 inline-block border border-[#3E6830] bg-[#0A1D08] px-4 py-2.5 text-xs tracking-wide text-[#CBB26A]">
-            Dual License: Joshua Jonassaint, LCSW CW023073 (PA) & RSW 842649 (ON) • Hard cap of 7 specialist slots total combined across Pennsylvania and Ontario • 7-Day Safety Net Active
+            Dual License: Joshua Jonassaint, LCSW CW023073 (PA) & RSW 842649 (ON)
           </div>
 
           <div>

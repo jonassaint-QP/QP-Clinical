@@ -44,7 +44,6 @@ export function InteriorPage({
         {note ? <p className="mt-8 border border-[#3E6830] bg-[#0A1D08] p-5 text-sm text-[#CCDEE0]">{note}</p> : null}
 
         <aside className="mt-12 border-t border-[#3E6830] pt-10 text-center">
-          <p className="mb-3 text-sm font-bold text-[#D3B127]">Hard cap of 7 specialist slots total combined across Pennsylvania and Ontario.</p>
           <p className="mb-6 text-sm text-[#C0BFBC]">Initial consultation pathways are offered within seven business days of inquiry, subject to jurisdiction and clinical fit.</p>
           <a href="/#therapy-notes-widget" className="btn-somatic-primary">
             Adjourn the Courtroom — Book Your Intake Assessment
