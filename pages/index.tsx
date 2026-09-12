@@ -104,6 +104,19 @@ export default function LandingPage() {
             </div>
           </section>
 
+          {/* Capacity and Safety Net */}
+          <section className="my-16 border border-[#3E6830] bg-[#153009] p-8 shadow-2xl">
+            <h2 className="mb-4 text-center text-3xl font-bold text-[#CBB26A]">
+              Specialist Capacity
+            </h2>
+            <p className="mb-6 text-center text-lg leading-relaxed text-[#C0BFBC]">
+              Hard cap of 7 specialist slots total combined across Pennsylvania and Ontario.
+            </p>
+            <p className="text-center text-sm text-[#CCDEE0]">
+              7-Day Safety Net Active — initial consultation pathways are offered within seven business days of inquiry, subject to jurisdiction and clinical fit.
+            </p>
+          </section>
+
           {/* Base Booking Anchor Component */}
           <section id="therapy-notes-widget" className="mt-16 scroll-mt-24 border-t border-[#3E6830] pt-12">
             <div className="text-center">
