@@ -31,7 +31,11 @@ export default function TermsPage() {
           body: <p>Queer Pathways does not provide 24/7 emergency crisis intervention. If you are experiencing an acute life-threatening emergency, immediate risk of self-harm, or severe psychiatric distress, you must immediately contact emergency services (911 in the US and Canada), call or text the Suicide & Crisis Lifeline at <strong>988</strong>, or proceed to the nearest hospital emergency room.</p>,
         },
         {
-          title: '4. Two-Lane Commercial & Clinical Separation (QP-POL-002)',
+          title: '4. Out-of-Network Reimbursement',
+          body: <p>For all out-of-network PPO insurance plans across Pennsylvania and Ontario, we issue itemized superbills and insurance-ready invoices directly upon payment, enabling seamless self-submission for out-of-network reimbursement. Third-party administrative claim platforms have been completely decommissioned.</p>,
+        },
+        {
+          title: '5. Two-Lane Commercial & Clinical Separation (QP-POL-002)',
           body: <p>E-commerce hardware transactions executed via our retail storefront at queerpathways.com (Lane 1) operate under complete, firewalled database, merchant processor, and payment gateway isolation from our clinical electronic health records (EHR) and therapy billing system at queerpathways.org (Lane 2). Outbound clicks to retail offerings are intercepted to guarantee zero cross-lane Protected Health Information (PHI) or financial data transversal.</p>,
         },
       ]}
