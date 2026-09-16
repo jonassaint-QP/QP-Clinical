@@ -100,12 +100,10 @@ export function ClinicalShell({
             <Link href="/terms" className="hover:underline">Terms of Service</Link>
             <Link href="/privacy" className="hover:underline">Notice of Privacy Practices</Link>
             <Link href="/gfe" className="hover:underline">Good Faith Estimate</Link>
-            <Link href="/phipa-addendum" className="hover:underline">PHIPA Addendum</Link>
             <Link href="/memoir-disclaimer" className="hover:underline">Memoir Disclaimer</Link>
           </nav>
           <nav aria-label="Resources" className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[#CCDEE0]">
             <Link href="/philly-queer-therapy" className="hover:text-[#CBB26A]">Pennsylvania</Link>
-            <Link href="/toronto-queer-therapy" className="hover:text-[#CBB26A]">Ontario</Link>
             <Link href="/resources/adhd-survival-guide" className="hover:text-[#CBB26A]">ADHD Survival Guide</Link>
             <Link href="/resources/adhd-survival-card" className="hover:text-[#CBB26A]">ADHD Survival Card</Link>
             <Link href="/resources/glossary" className="hover:text-[#CBB26A]">Glossary</Link>
