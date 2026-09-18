@@ -78,7 +78,6 @@ const requiredLandingContent = [
   'rel="noopener noreferrer"',
   'id="therapy-notes-widget"',
   'CW023073',
-  '842649',
   'Hard cap of 7 specialist slots total combined across Pennsylvania and Ontario',
   '7-Day Safety Net Active',
   'Rates locked through March 30, 2027',
@@ -96,7 +95,7 @@ for (const required of [
   'Queer Pathways Gold Centaur Archer Emblem',
   'Client Portal',
   'Supervision',
-  'https://blog.queerpathways.org',
+  '/resources/library',
   'Skip to main content',
   'id="main-content"',
   "window.open('https://queerpathways.com', '_blank', 'noopener,noreferrer')",
@@ -118,6 +117,7 @@ const requiredPageContent = new Map([
   ['pages/philosophy.tsx', ["WE DON'T BELIEVE IN BROKEN", 'The Double-Outsider Framework', 'The Internal Courtroom', 'The Ambiguity Tax', 'What We Offer Instead']],
   ['pages/services.tsx', ['THREE PATHWAYS. ONE RADICAL PREMISE.', 'Specialist Scaffolding', 'Relational Sovereignty', 'Gender Story Prep', 'DIGNITY INVESTMENT PRICING', '+1 (365) 599-9002']],
   ['pages/consultation.tsx', ['SUPERVISION: THE DBT CONSULTATION GROUP', 'The Focus', 'Format & Investment', '$75 USD / $100 CAD per session', 'Joshua@QueerPathways.org']],
+  ['pages/resources/library.tsx', ['Latest from the blog', 'Sunday Somatic Reset Note', 'https://blog.queerpathways.org/sunday-somatic-reset-note/']],
 ]);
 
 for (const [pagePath, requirements] of requiredPageContent) {

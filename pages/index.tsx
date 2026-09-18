@@ -40,7 +40,7 @@ export default function LandingPage() {
           </p>
 
           <div className="mb-8 inline-block border border-[#3E6830] bg-[#0A1D08] px-4 py-2.5 text-xs tracking-wide text-[#CBB26A]">
-            Dual License: Joshua Jonassaint, LCSW CW023073 (PA) & RSW 842649 (ON)
+            Joshua Jonassaint, LCSW • Pennsylvania License CW023073
           </div>
 
           <div>

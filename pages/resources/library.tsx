@@ -27,6 +27,24 @@ export default function ResourceLibraryPage() {
       introduction="This curated set of approved educational resources and reflection tools is for 2SLGBTQI+ men, non-binary people, neurodivergent professionals, and anyone building a life with less translation."
       sections={[
         {
+          title: 'Latest from the blog',
+          body: (
+            <div>
+              <p className="text-xs font-bold uppercase text-[#D3B127]">September 6, 2026</p>
+              <h3 className="mt-3 text-xl font-bold text-[#CBB26A]">Sunday Somatic Reset Note</h3>
+              <p className="mt-3">Radical acceptance usually begins in an ugly little moment.</p>
+              <a
+                href="https://blog.queerpathways.org/sunday-somatic-reset-note/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block font-semibold text-[#D3B127] underline"
+              >
+                Read the latest article
+              </a>
+            </div>
+          ),
+        },
+        {
           title: 'Start with the current collection',
           body: (
             <div>

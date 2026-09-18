@@ -70,14 +70,7 @@ export function ClinicalShell({
             <Link href="/services" className={navigationClass('/services')} aria-current={router.pathname === '/services' ? 'page' : undefined}>Services</Link>
             <Link href="/philosophy" className={navigationClass('/philosophy')} aria-current={router.pathname === '/philosophy' ? 'page' : undefined}>Philosophy</Link>
             <Link href="/consultation" className={navigationClass('/consultation')} aria-current={router.pathname === '/consultation' ? 'page' : undefined}>Supervision</Link>
-            <a
-              href="https://blog.queerpathways.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#CCDEE0] transition-colors hover:text-[#CBB26A]"
-            >
-              Blog
-            </a>
+            <Link href="/resources/library" className={navigationClass('/resources/library')} aria-current={router.pathname === '/resources/library' ? 'page' : undefined}>Library</Link>
             <a href="https://queerpathways.com" onClick={handleShopClick} className="font-semibold text-[#D3B127] transition-colors hover:underline">Storefront</a>
             <a
               href="https://www.therapyportal.com/p/queercharts/"
