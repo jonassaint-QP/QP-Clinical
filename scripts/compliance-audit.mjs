@@ -40,10 +40,13 @@ const bannedPatterns = [
   { label: 'pure white or pure black hex color', pattern: /#(?:fff(?:fff)?|000(?:000)?)(?![0-9a-f])/gi },
   { label: 'decommissioned cyan or magenta terminology', pattern: /\b(?:cyber[-_ ]?cyan|cyan[-_ ]?cyber|magenta[-_ ]?neon|neon[-_ ]?magenta)\b/gi },
   { label: 'QP-ICP-LANG-001 banned public term', pattern: /\bsibling\b/gi },
-  { label: 'banned or deprecated platform', pattern: /\b(?:stripe|carepatron|thrizer)\b/gi },
+  { label: 'banned or deprecated platform', pattern: /\b(?:stripe|carepatron)\b/gi },
   { label: 'citation artifact', pattern: /\[cite:\s*\d+\]/gi },
   { label: 'legacy capacity claim', pattern: /\b14\s+(?:specialist\s+)?slots?\b/gi },
   { label: 'embedded frame', pattern: /<iframe\b/gi },
+  { label: 'removed Ontario or Toronto reference', pattern: /\b(?:Ontario|Toronto)\b/gi },
+  { label: 'removed Ontario registration number', pattern: /\b842649\b/g },
+  { label: 'removed practice phone number', pattern: /(?:\+?1[\s.-]*)?\(?365\)?[\s.-]*599[\s.-]*9002/g },
   {
     label: 'physical street address pattern',
     pattern: /\b\d{1,6}\s+(?:[a-z0-9.'-]+\s+){0,4}(?:street|st|avenue|ave|road|rd|boulevard|blvd|drive|dr|lane|ln)\b/gi,
@@ -78,7 +81,7 @@ const requiredLandingContent = [
   'rel="noopener noreferrer"',
   'id="therapy-notes-widget"',
   'CW023073',
-  'Hard cap of 7 specialist slots total combined across Pennsylvania and Ontario',
+  'Hard cap of 7 specialist slots across Pennsylvania',
   '7-Day Safety Net Active',
   'Rates locked through March 30, 2027',
   '$225',
@@ -115,8 +118,8 @@ for (const required of [
 
 const requiredPageContent = new Map([
   ['pages/philosophy.tsx', ["WE DON'T BELIEVE IN BROKEN", 'The Double-Outsider Framework', 'The Internal Courtroom', 'The Ambiguity Tax', 'What We Offer Instead']],
-  ['pages/services.tsx', ['THREE PATHWAYS. ONE RADICAL PREMISE.', 'Specialist Scaffolding', 'Relational Sovereignty', 'Gender Story Prep', 'DIGNITY INVESTMENT PRICING', '+1 (365) 599-9002']],
-  ['pages/consultation.tsx', ['SUPERVISION: THE DBT CONSULTATION GROUP', 'The Focus', 'Format & Investment', '$75 USD / $100 CAD per session', 'Joshua@QueerPathways.org']],
+  ['pages/services.tsx', ['THREE PATHWAYS. ONE RADICAL PREMISE.', 'Specialist Scaffolding', 'Relational Sovereignty', 'Gender Story Prep', 'DIGNITY INVESTMENT PRICING', 'Out-of-network benefits may be paid through Thrizer at the client&apos;s request.']],
+  ['pages/consultation.tsx', ['SUPERVISION: THE DBT CONSULTATION GROUP', 'The Focus', 'Format & Investment', '$75 USD per session', 'Joshua@QueerPathways.org']],
   ['pages/resources/library.tsx', ['Latest from the blog', 'Sunday Somatic Reset Note', 'https://blog.queerpathways.org/sunday-somatic-reset-note/']],
 ]);
 
@@ -132,11 +135,9 @@ const requiredRoutes = [
   'philosophy.tsx',
   'consultation.tsx',
   'philly-queer-therapy.tsx',
-  'toronto-queer-therapy.tsx',
   'terms.tsx',
   'privacy.tsx',
   'gfe.tsx',
-  'phipa-addendum.tsx',
   'memoir-disclaimer.tsx',
   'shop.tsx',
   'resources/adhd-survival-guide.tsx',
@@ -171,7 +172,7 @@ if (!existsSync(emblemPath)) {
 
 const interiorPage = readFileSync(join(root, 'components/InteriorPage.tsx'), 'utf8');
 for (const required of [
-  'Hard cap of 7 specialist slots total combined across Pennsylvania and Ontario.',
+  'Hard cap of 7 specialist slots across Pennsylvania.',
   'Adjourn the Courtroom — Book Your Intake Assessment',
 ]) {
   if (!interiorPage.includes(required)) failures.push(`components/InteriorPage.tsx: missing shared requirement: ${required}`);

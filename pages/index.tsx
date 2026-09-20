@@ -14,7 +14,7 @@ export default function LandingPage() {
   return (
     <ClinicalShell
       title="Queer Pathways | Somatic Telehealth for the Double-Outsider"
-      description="Cross-border somatic telehealth for neurodivergent, non-binary, and 2SLGBTQI+ professionals in Pennsylvania and Ontario."
+      description="Somatic telehealth for neurodivergent, non-binary, and 2SLGBTQI+ professionals in Pennsylvania."
     >
         <div className="mx-auto max-w-5xl px-4 py-16 text-center">
           <div className="mb-6 flex justify-center">
@@ -36,7 +36,7 @@ export default function LandingPage() {
             SOMATIC SOVEREIGNTY FOR THE DOUBLE-OUTSIDER
           </h1>
           <p className="mb-8 text-lg leading-relaxed text-[#C0BFBC]">
-            We don't do sterile corporate wellness speak. We don't do clinical pathologizing. We build clinical architecture for survival, agency, and pleasure—specializing in 2SLGBTQI+ men, non-binary, and neurodivergent professionals navigating total identity-homelessness and chronic metabolic burnout across Pennsylvania and Ontario.
+            We don't do sterile corporate wellness speak. We don't do clinical pathologizing. We build clinical architecture for survival, agency, and pleasure—specializing in 2SLGBTQI+ men, non-binary, and neurodivergent professionals navigating total identity-homelessness and chronic metabolic burnout across Pennsylvania.
           </p>
 
           <div className="mb-8 inline-block border border-[#3E6830] bg-[#0A1D08] px-4 py-2.5 text-xs tracking-wide text-[#CBB26A]">
@@ -99,7 +99,7 @@ export default function LandingPage() {
               <div className="border border-[#3E6830] bg-[#0A1D08] p-6 text-center">
                 <h3 className="font-bold text-[#CBB26A]">Coaching Masterclass</h3>
                 <span className="text-2xl font-extrabold text-[#D3B127]">$150 / $200</span>
-                <p className="mt-1 text-xs text-[#C0BFBC]">1 Hr / 2 Hr (Billed in CAD for ON)</p>
+                <p className="mt-1 text-xs text-[#C0BFBC]">1 Hr / 2 Hr</p>
               </div>
             </div>
           </section>
@@ -110,7 +110,7 @@ export default function LandingPage() {
               Specialist Capacity
             </h2>
             <p className="mb-6 text-center text-lg leading-relaxed text-[#C0BFBC]">
-              Hard cap of 7 specialist slots total combined across Pennsylvania and Ontario.
+              Hard cap of 7 specialist slots across Pennsylvania.
             </p>
             <p className="text-center text-sm text-[#CCDEE0]">
               7-Day Safety Net Active — initial consultation pathways are offered within seven business days of inquiry, subject to jurisdiction and clinical fit.
@@ -124,7 +124,7 @@ export default function LandingPage() {
                 Ready to Adjourn Your Internal Courtroom?
               </h2>
               <p className="mb-8 text-[#C0BFBC]">
-                Initiate your intake assessment below. All client inquiries honor our 7-Day Safety Net guarantee across Pennsylvania and Ontario. To preserve practice sovereignty and telehealth safety, zero physical practice addresses are recorded or displayed.
+                Initiate your intake assessment below. All client inquiries honor our 7-Day Safety Net guarantee across Pennsylvania. To preserve practice sovereignty and telehealth safety, zero physical practice addresses are recorded or displayed.
               </p>
               <div className="border border-[#3E6830] bg-[#153009] px-6 py-10 shadow-2xl">
                 <p className="mb-6 text-sm leading-relaxed text-[#CCDEE0]">

@@ -12,7 +12,7 @@ interface ClinicalShellProps {
 }
 
 const defaultTitle = 'Queer Pathways | Somatic Telehealth for the Double-Outsider';
-const defaultDescription = 'Cross-border somatic telehealth for neurodivergent, non-binary, and 2SLGBTQI+ professionals in Pennsylvania and Ontario.';
+const defaultDescription = 'Somatic telehealth for neurodivergent, non-binary, and 2SLGBTQI+ professionals in Pennsylvania.';
 
 export function ClinicalShell({
   title = defaultTitle,
@@ -88,19 +88,16 @@ export function ClinicalShell({
 
       <footer className="border-t border-[#3E6830] bg-[#0A1D08] py-8 text-center text-xs text-[#C0BFBC]">
         <div className="mx-auto max-w-7xl space-y-3 px-4">
-          <p className="text-[#CCDEE0]">Queer Pathways Telehealth • Pennsylvania (CW023073) &amp; Ontario (RSW 842649)</p>
+          <p>
+            <Link href="/philly-queer-therapy" className="text-[#CCDEE0] hover:text-[#CBB26A]">
+              Queer Pathways Telehealth • Pennsylvania (CW023073)
+            </Link>
+          </p>
           <nav aria-label="Legal" className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[#CBB26A]">
             <Link href="/terms" className="hover:underline">Terms of Service</Link>
             <Link href="/privacy" className="hover:underline">Notice of Privacy Practices</Link>
             <Link href="/gfe" className="hover:underline">Good Faith Estimate</Link>
             <Link href="/memoir-disclaimer" className="hover:underline">Memoir Disclaimer</Link>
-          </nav>
-          <nav aria-label="Resources" className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[#CCDEE0]">
-            <Link href="/philly-queer-therapy" className="hover:text-[#CBB26A]">Pennsylvania</Link>
-            <Link href="/resources/adhd-survival-guide" className="hover:text-[#CBB26A]">ADHD Survival Guide</Link>
-            <Link href="/resources/adhd-survival-card" className="hover:text-[#CBB26A]">ADHD Survival Card</Link>
-            <Link href="/resources/glossary" className="hover:text-[#CBB26A]">Glossary</Link>
-            <Link href="/resources/thriving-ten-rules" className="hover:text-[#CBB26A]">The Thriving Ten</Link>
           </nav>
           <p className="text-[10px] text-[#C0BFBC]/70">Operational Sovereignty Notice: Practice operates strictly via encrypted telehealth. Zero public physical practice addresses are maintained.</p>
         </div>

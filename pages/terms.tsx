@@ -13,14 +13,13 @@ export default function TermsPage() {
           body: (
             <div className="space-y-2">
               <p><strong>Operating Entity:</strong> Queer Pathways LLC</p>
-              <p><strong>Active Practice Phone:</strong> <a href="tel:+13655999002" className="text-[#D3B127] underline">+1 (365) 599-9002</a></p>
               <p><strong>Administrative Inquiries:</strong> <a href="mailto:jonassaint@queerpathways.org" className="text-[#D3B127] underline">jonassaint@queerpathways.org</a></p>
             </div>
           ),
         },
         {
-          title: '1. Cross-Border Telehealth Jurisdictional Scope',
-          body: <p>Telehealth psychotherapy, clinical consultation, and specialized mental health services provided through queerpathways.org are strictly limited to eligible clients who are <strong>physically located within the Commonwealth of Pennsylvania (United States) or the Province of Ontario (Canada) at the exact time of session delivery</strong>. Clinical care is delivered exclusively by Joshua Samuel Jonassaint, LCSW, RSW, under active credentials in Pennsylvania (Licensed Clinical Social Worker #CW023073) and Ontario (Registered Social Worker No. 842649).</p>,
+          title: '1. Telehealth Jurisdictional Scope',
+          body: <p>Telehealth psychotherapy, clinical consultation, and specialized mental health services provided through queerpathways.org are strictly limited to eligible clients who are <strong>physically located within the Commonwealth of Pennsylvania at the exact time of session delivery</strong>. Clinical care is delivered exclusively by Joshua Samuel Jonassaint, LCSW, under an active Pennsylvania Licensed Clinical Social Worker credential (#CW023073).</p>,
         },
         {
           title: '2. Virtual Practice Sovereignty & Physical Address Protection',
@@ -32,7 +31,7 @@ export default function TermsPage() {
         },
         {
           title: '4. Out-of-Network Reimbursement',
-          body: <p>For all out-of-network PPO insurance plans across Pennsylvania and Ontario, we issue itemized superbills and insurance-ready invoices directly upon payment, enabling seamless self-submission for out-of-network reimbursement. Third-party administrative claim platforms have been completely decommissioned.</p>,
+          body: <p>For out-of-network PPO insurance plans in Pennsylvania, we issue itemized superbills and insurance-ready invoices directly upon payment, enabling seamless self-submission for out-of-network reimbursement. Out-of-network benefits may also be paid through Thrizer at the client&apos;s request.</p>,
         },
         {
           title: '5. Two-Lane Commercial & Clinical Separation (QP-POL-002)',

@@ -4,7 +4,7 @@ export default function SupervisionPage() {
   return (
     <ClinicalShell
       title="DBT Consultation Group & Supervision | Queer Pathways"
-      description="Professional peer consultation and DBT training for licensed therapists working with 2SLGBTQI+ and neurodivergent adults across Pennsylvania and Ontario."
+      description="Professional peer consultation and DBT training for licensed therapists working with 2SLGBTQI+ and neurodivergent adults."
     >
       <div className="mx-auto max-w-4xl px-4 py-16">
         <div className="mb-10 text-center">
@@ -31,15 +31,15 @@ export default function SupervisionPage() {
           <div className="border border-[#3E6830] bg-[#153009] p-8 shadow-2xl">
             <h2 className="mb-6 text-2xl font-bold text-[#CBB26A]">Format & Investment</h2>
             <div className="grid gap-6 text-center sm:grid-cols-3">
-              <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Group Format</h3><p className="mt-2 text-xs text-[#C0BFBC]">Live virtual consultation sessions for PA & ON clinicians</p></div>
-              <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Investment</h3><p className="mt-2 text-xs font-bold text-[#D3B127]">$75 USD / $100 CAD per session</p></div>
+              <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Group Format</h3><p className="mt-2 text-xs text-[#C0BFBC]">Live virtual consultation sessions for licensed clinicians</p></div>
+              <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Investment</h3><p className="mt-2 text-xs font-bold text-[#D3B127]">$75 USD per session</p></div>
               <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Eligibility</h3><p className="mt-2 text-xs text-[#C0BFBC]">Licensed external therapists seeking peer consultation</p></div>
             </div>
           </div>
         </section>
 
         <div className="mt-12 border-t border-[#3E6830] pt-8 text-center">
-          <p className="mb-4 text-sm text-[#CCDEE0]">To join the consultation track, reach out directly to Joshua Jonassaint, LCSW, RSW:</p>
+          <p className="mb-4 text-sm text-[#CCDEE0]">To join the consultation track, reach out directly to Joshua Jonassaint, LCSW:</p>
           <a href="mailto:Joshua@QueerPathways.org" className="btn-somatic-secondary inline-block font-bold">Contact Joshua@QueerPathways.org</a>
         </div>
       </div>

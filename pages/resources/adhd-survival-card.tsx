@@ -65,7 +65,6 @@ export default function AdhdSurvivalCardPage() {
                   className="mb-4 w-full border border-[#3E6830] bg-[#020501] px-4 py-3 text-base text-[#CCDEE0] focus:border-[#CBB26A] focus:outline-none focus:ring-2 focus:ring-[#CBB26A]"
                 >
                   <option value="" disabled>Select your region</option>
-                  <option value="ontario">Ontario</option>
                   <option value="pennsylvania">Pennsylvania</option>
                   <option value="elsewhere">Elsewhere</option>
                 </select>
@@ -98,7 +97,7 @@ export default function AdhdSurvivalCardPage() {
 
           <aside className="border-t border-[#3E6830] pt-6 text-sm leading-relaxed text-[#C0BFBC]/75">
             <p>
-              <strong className="text-[#C0BFBC]">Compliance &amp; Memoir Disclaimer:</strong> This resource is for informational, educational, and narrative purposes only. Reading this card or utilizing these curated tools does not constitute or establish a formal therapist-client relationship with Joshua Jonassaint, RSW, LCSW, or with Queer Pathways. If you are navigating mental health concerns, trauma, or crisis, please seek individualized guidance from a licensed and qualified provider in your jurisdiction. For 24/7 crisis support, dial 988.
+              <strong className="text-[#C0BFBC]">Compliance &amp; Memoir Disclaimer:</strong> This resource is for informational, educational, and narrative purposes only. Reading this card or utilizing these curated tools does not constitute or establish a formal therapist-client relationship with Joshua Jonassaint, LCSW, or with Queer Pathways. If you are navigating mental health concerns, trauma, or crisis, please seek individualized guidance from a licensed and qualified provider in your jurisdiction. For 24/7 crisis support, dial 988.
             </p>
           </aside>
         </article>

@@ -8,7 +8,7 @@ export default function ServicesPage() {
   return (
     <ClinicalShell
       title="Services & Pricing | Queer Pathways — Specialist Scaffolding"
-      description="Three pathways grounded in identity-fluent, kink-fluent, and neuro-affirming clinical scaffolding across Pennsylvania and Ontario."
+      description="Three pathways grounded in identity-fluent, kink-fluent, and neuro-affirming clinical scaffolding across Pennsylvania."
     >
       <div className="mx-auto max-w-5xl px-4 py-16">
         <div className="mb-12 text-center">
@@ -36,13 +36,13 @@ export default function ServicesPage() {
 
         <section className="my-16 border border-[#3E6830] bg-[#153009] p-8 shadow-2xl">
           <h2 className="mb-2 text-center text-3xl font-bold text-[#CBB26A]">DIGNITY INVESTMENT PRICING</h2>
-          <p className="mb-8 text-center text-xs text-[#CCDEE0]">Locked through March 30, 2027 • Practice Coordinates: +1 (365) 599-9002</p>
+          <p className="mb-8 text-center text-xs text-[#CCDEE0]">Locked through March 30, 2027</p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               ['Intake Assessment', '$225', '90 Minutes'],
               ['Individual Therapy', '$150', '50 Minutes'],
               ['Relationship Therapy', '$200', '50 Minutes'],
-              ['Coaching Masterclass', '$150 / $200', '1 Hr / 2 Hr (Billed in CAD for ON)'],
+              ['Coaching Masterclass', '$150 / $200', '1 Hr / 2 Hr'],
             ].map(([name, price, duration]) => (
               <div key={name} className="border border-[#3E6830] bg-[#0A1D08] p-6 text-center">
                 <h3 className="font-bold text-[#CBB26A]">{name}</h3>
@@ -52,7 +52,7 @@ export default function ServicesPage() {
             ))}
           </div>
           <div className="mt-8 space-y-2 border-t border-[#3E6830] pt-6 text-xs text-[#C0BFBC]">
-            <p><strong className="text-[#CBB26A]">Insurance & Coverage:</strong> Direct superbill and invoice generation for client self-submission. In Ontario, RSW receipts may support reimbursement through Sun Life, Manulife, Canada Life, and Desjardins. In Pennsylvania, active in-network care is maintained with Aetna, Highmark BCBS, and Cigna via TherapyNotes.</p>
+            <p><strong className="text-[#CBB26A]">Insurance & Coverage:</strong> Direct superbill and invoice generation for client self-submission. Out-of-network benefits may be paid through Thrizer at the client&apos;s request. In Pennsylvania, active in-network care is maintained with Aetna, Highmark BCBS, and Cigna via TherapyNotes.</p>
           </div>
         </section>
 

@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const validJurisdictions = new Set(['ontario', 'pennsylvania', 'elsewhere']);
+const validJurisdictions = new Set(['pennsylvania', 'elsewhere']);
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function redirect(response: NextApiResponse, status: 'sent' | 'error') {
@@ -39,9 +39,6 @@ export default async function handler(request: NextApiRequest, response: NextApi
   }
 
   const tags = ['newsletter', 'adhd-survival-card'];
-  if (jurisdiction === 'ontario') {
-    tags.push('ontario-warm-referral-pool');
-  }
 
   try {
     const webhookResponse = await fetch(webhookUrl, {
