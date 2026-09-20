@@ -52,7 +52,7 @@ export default function ServicesPage() {
             ))}
           </div>
           <div className="mt-8 space-y-2 border-t border-[#3E6830] pt-6 text-xs text-[#C0BFBC]">
-            <p><strong className="text-[#CBB26A]">Insurance & Coverage:</strong> Direct superbill and invoice generation for client self-submission. Out-of-network benefits may be paid through Thrizer at the client&apos;s request. In Pennsylvania, active in-network care is maintained with Aetna, Highmark BCBS, and Cigna via TherapyNotes.</p>
+            <p><strong className="text-[#CBB26A]">Insurance & Coverage:</strong> Direct superbill and invoice generation for client self-submission. Out-of-network benefits may be paid through Thrizer at the client&apos;s request. In Pennsylvania, active in-network care is maintained with Aetna and Highmark BCBS via TherapyNotes.</p>
           </div>
         </section>
 
