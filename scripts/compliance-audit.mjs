@@ -117,11 +117,15 @@ for (const required of [
   if (!appSource.includes(required)) failures.push(`pages/_app.tsx: missing canonical URL requirement: ${required}`);
 }
 
+// The library page assertion no longer pins a legacy blog URL. Substack is the
+// primary blog home and the previous node is retiring, so requiring its address
+// would have failed the build for the correct removal, the same way the vendor
+// assertion did. The page's own content assertions remain in force.
 const requiredPageContent = new Map([
   ['pages/philosophy.tsx', ["WE DON'T BELIEVE IN BROKEN", 'The Double-Outsider Framework', 'The Internal Courtroom', 'The Ambiguity Tax', 'What We Offer Instead']],
   ['pages/services.tsx', ['THREE PATHWAYS. ONE RADICAL PREMISE.', 'Specialist Scaffolding', 'Relational Sovereignty', 'Gender Story Prep', 'DIGNITY INVESTMENT PRICING', 'Direct superbill and invoice generation for client self-submission.']],
   ['pages/consultation.tsx', ['SUPERVISION: THE DBT CONSULTATION GROUP', 'The Focus', 'Format & Investment', '$75 USD per session', 'Joshua@QueerPathways.org']],
-  ['pages/resources/library.tsx', ['Latest from the blog', 'Sunday Somatic Reset Note', 'https://blog.queerpathways.org/sunday-somatic-reset-note/']],
+  ['pages/resources/library.tsx', ['Latest from the blog', 'Sunday Somatic Reset Note']],
 ]);
 
 for (const [pagePath, requirements] of requiredPageContent) {
