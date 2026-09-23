@@ -31,7 +31,7 @@ export default function TermsPage() {
         },
         {
           title: '4. Out-of-Network Reimbursement',
-          body: <p>For out-of-network PPO insurance plans in Pennsylvania, we issue itemized superbills and insurance-ready invoices directly upon payment, enabling seamless self-submission for out-of-network reimbursement. Out-of-network benefits may also be paid through Thrizer at the client&apos;s request.</p>,
+          body: <p>For out-of-network PPO insurance plans in Pennsylvania, we issue itemized superbills and insurance-ready invoices directly upon payment, enabling seamless self-submission for out-of-network reimbursement.</p>,
         },
         {
           title: '5. Two-Lane Commercial & Clinical Separation (QP-POL-002)',

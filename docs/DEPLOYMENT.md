@@ -18,8 +18,8 @@ Repository: `jonassaint-QP/QP-Clinical`
    - Pennsylvania credential `CW023073`;
    - the seven-slot cap and seven-business-day intake commitment;
    - no physical practice address;
-   - no Stripe, Carepatron, cyan/magenta neon, pure black, pure white, or public use of “Sibling”;
-   - client-requested out-of-network payment through Thrizer remains visible in coverage disclosures.
+   - no Stripe, Carepatron, third-party out-of-network billing platform, cyan/magenta neon, pure black, pure white, or public use of “Sibling”;
+   - out-of-network reimbursement documented through itemized superbills and insurance-ready invoices generated directly by the practice, with no third-party payment platform named in copy.
 
 3. Push the reviewed commit to `main`. Netlify builds with `npm run build` from `netlify.toml`.
 4. Smoke-test all routes, the booking-anchor scroll, and the `/shop` security modal.

@@ -41,6 +41,7 @@ const bannedPatterns = [
   { label: 'decommissioned cyan or magenta terminology', pattern: /\b(?:cyber[-_ ]?cyan|cyan[-_ ]?cyber|magenta[-_ ]?neon|neon[-_ ]?magenta)\b/gi },
   { label: 'QP-ICP-LANG-001 banned public term', pattern: /\bsibling\b/gi },
   { label: 'banned or deprecated platform', pattern: /\b(?:stripe|carepatron)\b/gi },
+  { label: 'banned third-party out-of-network billing platform', pattern: /\bthrizer\b/gi },
   { label: 'citation artifact', pattern: /\[cite:\s*\d+\]/gi },
   { label: 'legacy capacity claim', pattern: /\b14\s+(?:specialist\s+)?slots?\b/gi },
   { label: 'embedded frame', pattern: /<iframe\b/gi },
@@ -118,7 +119,7 @@ for (const required of [
 
 const requiredPageContent = new Map([
   ['pages/philosophy.tsx', ["WE DON'T BELIEVE IN BROKEN", 'The Double-Outsider Framework', 'The Internal Courtroom', 'The Ambiguity Tax', 'What We Offer Instead']],
-  ['pages/services.tsx', ['THREE PATHWAYS. ONE RADICAL PREMISE.', 'Specialist Scaffolding', 'Relational Sovereignty', 'Gender Story Prep', 'DIGNITY INVESTMENT PRICING', 'Out-of-network benefits may be paid through Thrizer at the client&apos;s request.']],
+  ['pages/services.tsx', ['THREE PATHWAYS. ONE RADICAL PREMISE.', 'Specialist Scaffolding', 'Relational Sovereignty', 'Gender Story Prep', 'DIGNITY INVESTMENT PRICING', 'Direct superbill and invoice generation for client self-submission.']],
   ['pages/consultation.tsx', ['SUPERVISION: THE DBT CONSULTATION GROUP', 'The Focus', 'Format & Investment', '$75 USD per session', 'Joshua@QueerPathways.org']],
   ['pages/resources/library.tsx', ['Latest from the blog', 'Sunday Somatic Reset Note', 'https://blog.queerpathways.org/sunday-somatic-reset-note/']],
 ]);

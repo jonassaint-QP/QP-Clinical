@@ -36,7 +36,7 @@ export default function GoodFaithEstimatePage() {
           title: '3. Approved Out-of-Network Reimbursement Policy',
           body: (
             <div className="space-y-3">
-              <p>For out-of-network PPO insurance plans in Pennsylvania, <strong>we issue itemized superbills and insurance-ready invoices directly upon payment, enabling seamless self-submission for out-of-network reimbursement</strong>. Out-of-network benefits may also be paid through Thrizer at the client&apos;s request.</p>
+              <p>For out-of-network PPO insurance plans in Pennsylvania, <strong>we issue itemized superbills and insurance-ready invoices directly upon payment, enabling seamless self-submission for out-of-network reimbursement</strong>.</p>
               <p>In Pennsylvania, in-network coverage is active for Aetna (PIN #6797426) and Highmark BCBS.</p>
             </div>
           ),
