@@ -14,6 +14,7 @@ export default function GoodFaithEstimatePage() {
             <div className="space-y-2">
               <p><strong>Provider NPI (Type 1):</strong> 1922592591</p>
               <p><strong>Aetna Provider PIN (PA):</strong> 6797426</p>
+              <p><strong>Administrative Contact:</strong> <a href="mailto:jonassaint@queerpathways.org" className="text-[#D3B127] underline">jonassaint@queerpathways.org</a></p>
             </div>
           ),
         },
