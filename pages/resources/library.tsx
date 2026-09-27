@@ -1,4 +1,4 @@
-import { InteriorPage } from '../../components/Interiorpage';
+import { InteriorPage } from '../../components/InteriorPage';
 
 export default function ResourceLibraryPage() {
   return (
