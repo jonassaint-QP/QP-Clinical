@@ -1,22 +1,4 @@
-import { InteriorPage } from '../../components/InteriorPage';
-
-interface LibraryResource {
-  title: string;
-  description: string;
-  href: string;
-  verified: boolean;
-  approvalNote: string;
-}
-
-/*
-RESOURCE-MAPPING CONFIGURATION - not rendered until approved.
-Each entry requires a title, a one-sentence audience-facing description, an
-exact verified Google Drive share URL, an approval-gate note, and verified:
-true. Filenames and links must come from Joshua's verified Drive inventory.
-Unverified entries must never be linked or rendered.
-*/
-const libraryResources: LibraryResource[] = [];
-const verifiedResources = libraryResources.filter((resource) => resource.verified);
+import { InteriorPage } from '../../components/Interiorpage';
 
 export default function ResourceLibraryPage() {
   return (
@@ -47,27 +29,34 @@ export default function ResourceLibraryPage() {
         {
           title: 'Start with the current collection',
           body: (
-            <div>
-              <a
-                href="https://drive.google.com/drive/folders/1DazO387_aLXffQ1yOTJ4Q2nyIp-Brqpc?usp=drive_link"
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="Open the Queer Pathways approved resource library in a new tab"
-                className="block border border-[#CBB26A]/50 bg-[#0A1D08] p-6 hover:border-[#CBB26A]"
-              >
-                <p className="text-xs font-bold uppercase text-[#D3B127]">Google Drive folder</p>
-                <h3 className="mt-3 text-xl font-bold text-[#CBB26A]">Joshua's approved resource library</h3>
-                <p className="mt-3 text-sm text-[#C0BFBC]">Open the secure folder for the current collection of approved educational materials.</p>
-                <span className="mt-4 inline-block text-xs font-bold uppercase text-[#D3B127] underline decoration-[#CBB26A]/50 underline-offset-8">Open the Library</span>
-                <p className="mt-4 text-xs text-[#C0BFBC]/70">You will be taken to a secure Google Drive folder. If a file asks for access, email jonassaint@queerpathways.org.</p>
-              </a>
-            </div>
+            <ul className="space-y-5">
+              <li>
+                <a href="/resources/adhd-survival-card" className="font-bold text-[#D3B127] underline">The ADHD Survival Card</a>
+                <p className="mt-1 text-sm text-[#C0BFBC]">A scannable reference for the neurodivergent, kink-affirming, and chronically overstimulated.</p>
+              </li>
+              <li>
+                <a href="/resources/thriving-ten-rules" className="font-bold text-[#D3B127] underline">Ten Rules for Thriving</a>
+                <p className="mt-1 text-sm text-[#C0BFBC]">Practical systems for Double-Outsider lives beyond moral effort.</p>
+              </li>
+              <li>
+                <a href="/resources/glossary" className="font-bold text-[#D3B127] underline">Glossary of Terms of Art</a>
+                <p className="mt-1 text-sm text-[#C0BFBC]">The shared language this practice works in, defined in plain terms.</p>
+              </li>
+              <li>
+                <a href="/resources/adhd-survival-guide" className="font-bold text-[#D3B127] underline">ADHD Survival Guide</a>
+                <p className="mt-1 text-sm text-[#C0BFBC]">The longer companion to the survival card.</p>
+              </li>
+              <li>
+                <a href="/resources" className="font-bold text-[#D3B127] underline">Everything in the library</a>
+                <p className="mt-1 text-sm text-[#C0BFBC]">The full set of resources, clinical notices and practice documents.</p>
+              </li>
+            </ul>
           ),
         },
         {
-          title: 'More resources are being curated',
+          title: 'New material is added only after review',
           body: (
-            <p>The Drive folder is the current source of approved materials. Additional files will appear here only after their exact links and approval notes are verified.</p>
+            <p>Everything on this page is hosted here, on the practice's own domain. New material is added after its content and approval note are verified, and nothing is linked before that point.</p>
           ),
         },
       ]}

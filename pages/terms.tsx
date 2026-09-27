@@ -37,6 +37,10 @@ export default function TermsPage() {
           title: '5. Two-Lane Commercial & Clinical Separation (QP-POL-002)',
           body: <p>E-commerce hardware transactions executed via our retail storefront at queerpathways.com (Lane 1) operate under complete, firewalled database, merchant processor, and payment gateway isolation from our clinical electronic health records (EHR) and therapy billing system at queerpathways.org (Lane 2). Outbound clicks to retail offerings are intercepted to guarantee zero cross-lane Protected Health Information (PHI) or financial data transversal.</p>,
         },
+        {
+          title: 'Records & Retention',
+          body: <p>How long clinical records are kept, and how they are destroyed, is set out in full on our <a href="/privacy" className="text-[#D3B127] underline">privacy page</a>. This page does not restate those periods.</p>,
+        },
       ]}
       showBookingCta={false}
       trailingContact={<>Practice telephone: +1 (919) 219-1754</>}

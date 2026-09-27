@@ -40,12 +40,12 @@ export default function PhilosophyPage() {
 
           <div className="border border-[#3E6830] bg-[#0A1D08] p-8 shadow-2xl">
             <h2 className="mb-6 text-2xl font-bold text-[#CBB26A]">What We Offer Instead</h2>
-            <ol className="space-y-4 text-sm text-[#C0BFBC]">
-              <li><strong className="text-[#CCDEE0]">1. Scaffolding, not fixing:</strong> We do not believe your executive function needs correction. We build systems around your actual operating system.</li>
-              <li><strong className="text-[#CCDEE0]">2. Relational sovereignty:</strong> Desire is not an edge case in this room. Kink, polyamory, non-monogamy, and your specific relational architecture are yours to design.</li>
-              <li><strong className="text-[#CCDEE0]">3. Gender on your timeline:</strong> No required waiting periods. No gatekeeping. No proving you are trans enough.</li>
-              <li><strong className="text-[#CCDEE0]">4. Trauma-informed by default:</strong> Not a checkbox or a wall certification. It is how we structure every session.</li>
-            </ol>
+            <ul className="space-y-4 text-sm text-[#C0BFBC]">
+              <li><strong className="text-[#CCDEE0]">Scaffolding, not fixing:</strong> We do not believe your executive function needs correction. We build systems around your actual operating system.</li>
+              <li><strong className="text-[#CCDEE0]">Relational sovereignty:</strong> Desire is not an edge case in this room. Kink, polyamory, non-monogamy, and your specific relational architecture are yours to design.</li>
+              <li><strong className="text-[#CCDEE0]">Gender on your timeline:</strong> No required waiting periods. No gatekeeping. No proving you are trans enough.</li>
+              <li><strong className="text-[#CCDEE0]">Trauma-informed by default:</strong> Not a checkbox or a wall certification. It is how we structure every session.</li>
+            </ul>
           </div>
         </section>
 
