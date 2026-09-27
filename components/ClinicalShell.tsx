@@ -69,6 +69,7 @@ export function ClinicalShell({
           <nav aria-label="Primary navigation" className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium">
             <Link href="/services" className={navigationClass('/services')} aria-current={router.pathname === '/services' ? 'page' : undefined}>Services</Link>
             <Link href="/philosophy" className={navigationClass('/philosophy')} aria-current={router.pathname === '/philosophy' ? 'page' : undefined}>Philosophy</Link>
+            <Link href="/coaching" className={navigationClass('/coaching')} aria-current={router.pathname === '/coaching' ? 'page' : undefined}>Coaching</Link>
             <Link href="/consultation" className={navigationClass('/consultation')} aria-current={router.pathname === '/consultation' ? 'page' : undefined}>Supervision</Link>
             <Link href="/resources/library" className={navigationClass('/resources/library')} aria-current={router.pathname === '/resources/library' ? 'page' : undefined}>Library</Link>
             <a href="https://queerpathways.com" onClick={handleShopClick} className="font-semibold text-[#D3B127] transition-colors hover:underline">Storefront</a>
