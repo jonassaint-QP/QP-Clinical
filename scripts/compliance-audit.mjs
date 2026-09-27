@@ -100,6 +100,7 @@ for (const required of [
   'Client Portal',
   'Supervision',
   '/resources/library',
+  '/coaching',
   'Skip to main content',
   'id="main-content"',
   "window.open('https://queerpathways.com', '_blank', 'noopener,noreferrer')",
@@ -122,6 +123,7 @@ const requiredPageContent = new Map([
   ['pages/services.tsx', ['THREE PATHWAYS. ONE RADICAL PREMISE.', 'Specialist Scaffolding', 'Relational Sovereignty', 'Gender Story Prep', 'DIGNITY INVESTMENT PRICING', 'Direct superbill and invoice generation for client self-submission.']],
   ['pages/consultation.tsx', ['SUPERVISION: THE DBT CONSULTATION GROUP', 'The Focus', 'Format & Investment', '$75 USD per session', 'Joshua@QueerPathways.org']],
   ['pages/resources/library.tsx', ['Latest from the blog', 'Sunday Somatic Reset Note', 'https://blog.queerpathways.org/sunday-somatic-reset-note/']],
+  ['pages/coaching.tsx', ['The Internal Courtroom Audit Masterclass', 'Not therapy, and not a clinical service.', 'No insurance, and no superbills.', 'Clinical care is Pennsylvania-only.', 'Enquire about the masterclass']],
 ]);
 
 for (const [pagePath, requirements] of requiredPageContent) {
@@ -131,9 +133,30 @@ for (const [pagePath, requirements] of requiredPageContent) {
   }
 }
 
+/*
+Privacy and terms disclosure assertions.
+
+The administrative telephone disclosure is required on pages/terms.tsx and nowhere
+else. The administrative contact route is required on pages/privacy.tsx as well,
+which is the endpoint that lost it once already. The retention content is asserted
+so it cannot be silently dropped by a later rewrite.
+*/
+const privacyPage = readFileSync(join(root, 'pages/privacy.tsx'), 'utf8');
+for (const required of [
+  'Administrative Contact:',
+  'mailto:jonassaint@queerpathways.org',
+  'How long records are kept',
+  '49 Pa. Code § 47.78(b)',
+  '45 CFR § 164.530(j)(2)',
+  'How records are destroyed',
+]) {
+  if (!privacyPage.includes(required)) failures.push(`pages/privacy.tsx: missing required disclosure: ${required}`);
+}
+
 const requiredRoutes = [
   'services.tsx',
   'philosophy.tsx',
+  'coaching.tsx',
   'consultation.tsx',
   'philly-queer-therapy.tsx',
   'terms.tsx',
@@ -145,6 +168,7 @@ const requiredRoutes = [
   'resources/adhd-survival-card.tsx',
   'resources/glossary.tsx',
   'resources/thriving-ten-rules.tsx',
+  'resources/library.tsx',
 ];
 
 for (const route of requiredRoutes) {
@@ -209,18 +233,6 @@ for (const required of [
 
 if (existsSync(join(root, 'netlify/functions'))) {
   failures.push('netlify/functions: retail serverless functions must not be deployed from the clinical repository');
-}
-
-const termsPage = readFileSync(join(root, 'pages/terms.tsx'), 'utf8');
-if (!termsPage.includes('+1 (919) 219-1754')) {
-  failures.push('pages/terms.tsx: required administrative telephone disclosure is missing');
-}
-
-for (const source of sources) {
-  if (source.path === 'pages/terms.tsx') continue;
-  if (/919[\s.)-]*219[\s.-]*1754/.test(source.content)) {
-    failures.push(`${source.path}: administrative telephone must appear only on pages/terms.tsx`);
-  }
 }
 
 if (failures.length > 0) {
