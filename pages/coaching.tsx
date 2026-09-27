@@ -31,7 +31,7 @@ export default function CoachingPage() {
           body: (
             <ul className="space-y-3">
               <li><strong className="text-[#CCDEE0]">Not therapy, and not a clinical service.</strong> The masterclass is educational. It does not diagnose, treat or assess any mental health condition.</li>
-              <li><strong className="text-[#CCDEE0]">No treatment promises.</strong> No clinical outcome is offered or implied. Nothing here replaces individualised assessment by a qualified professional.</li>
+              <li><strong className="text-[#CCDEE0]">No treatment promises.</strong> No clinical outcome is offered or implied. Nothing here replaces individualized assessment by a qualified professional.</li>
               <li><strong className="text-[#CCDEE0]">No insurance, and no superbills.</strong> The masterclass is strictly out of pocket. It is not billable to insurance, and no superbill or reimbursement documentation is issued for it.</li>
               <li><strong className="text-[#CCDEE0]">No crisis role.</strong> This is not a crisis service and it does not provide 24/7 support. In an emergency, contact emergency services or your local crisis line.</li>
             </ul>

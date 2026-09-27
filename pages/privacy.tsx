@@ -30,7 +30,7 @@ export default function PrivacyPage() {
           title: 'Compliance documentation',
           body: (
             <div className="space-y-3">
-              <p><strong className="text-[#CCDEE0]">This is not your clinical record.</strong> It is our own paperwork: the notices, policies, authorisations and analyses we are required to keep to show that we follow federal privacy rules. It does not contain your treatment record and it is not a route to it.</p>
+              <p><strong className="text-[#CCDEE0]">This is not your clinical record.</strong> It is our own paperwork: the notices, policies, authorizations and analyses we are required to keep to show that we follow federal privacy rules. It does not contain your treatment record and it is not a route to it.</p>
               <p>We keep this documentation for six years from the date it was created or last in effect, as <strong className="text-[#CCDEE0]">45 CFR § 164.530(j)(2)</strong> requires, alongside <strong className="text-[#CCDEE0]">§ 164.316(b)(2)(i)</strong> for the underlying documentation standard.</p>
             </div>
           ),
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
         },
         { title: 'Retail Isolation', body: <p>Clinical information is not sent to retail databases. Retail customer data is not entered into the electronic health record.</p> },
         { title: 'Website Data', body: <p>Routine hosting logs may process technical information needed for security and delivery. Do not place sensitive clinical details in general website or retail fields.</p> },
-        { title: 'Out-of-Network Reimbursement', body: <p>For out-of-network PPO insurance plans in Pennsylvania, we issue itemised superbills and insurance-ready invoices directly upon payment, enabling self-submission for out-of-network reimbursement.</p> },
+        { title: 'Out-of-Network Reimbursement', body: <p>For out-of-network PPO insurance plans in Pennsylvania, we issue itemized superbills and insurance-ready invoices directly upon payment, enabling self-submission for out-of-network reimbursement.</p> },
         { title: 'Privacy Requests', body: <p>Clients may use established secure clinical channels to ask about access, correction, restriction, or other applicable privacy rights.</p> },
       ]}
     />
