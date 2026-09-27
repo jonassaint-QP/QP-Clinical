@@ -13,6 +13,8 @@ interface InteriorPageProps {
   introduction: string;
   sections: Section[];
   note?: string;
+  showBookingCta?: boolean;
+  trailingContact?: ReactNode;
 }
 
 export function InteriorPage({
@@ -22,6 +24,8 @@ export function InteriorPage({
   introduction,
   sections,
   note,
+  showBookingCta = true,
+  trailingContact,
 }: InteriorPageProps) {
   return (
     <ClinicalShell title={title} description={description}>
@@ -43,14 +47,20 @@ export function InteriorPage({
 
         {note ? <p className="mt-8 border border-[#3E6830] bg-[#0A1D08] p-5 text-sm text-[#CCDEE0]">{note}</p> : null}
 
-        <aside className="mt-12 border-t border-[#3E6830] pt-10 text-center">
-          <p className="mb-6 text-sm text-[#C0BFBC]">
-            Hard cap of 7 specialist slots across Pennsylvania. Initial consultation pathways are offered within seven business days of inquiry, subject to jurisdiction and clinical fit.
-          </p>
-          <a href="/#therapy-notes-widget" className="btn-somatic-primary">
-            Adjourn the Courtroom — Book Your Intake Assessment
-          </a>
-        </aside>
+        {showBookingCta ? (
+          <aside className="mt-12 border-t border-[#3E6830] pt-10 text-center">
+            <p className="mb-6 text-sm text-[#C0BFBC]">
+              Hard cap of 7 specialist slots across Pennsylvania. Initial consultation pathways are offered within seven business days of inquiry, subject to jurisdiction and clinical fit.
+            </p>
+            <a href="/#therapy-notes-widget" className="btn-somatic-primary">
+              Adjourn the Courtroom — Book Your Intake Assessment
+            </a>
+          </aside>
+        ) : null}
+
+        {trailingContact ? (
+          <p className="mt-10 text-center text-[10px] leading-relaxed text-[#C0BFBC]/70">{trailingContact}</p>
+        ) : null}
       </div>
     </ClinicalShell>
   );

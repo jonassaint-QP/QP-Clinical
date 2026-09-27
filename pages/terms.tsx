@@ -38,6 +38,8 @@ export default function TermsPage() {
           body: <p>E-commerce hardware transactions executed via our retail storefront at queerpathways.com (Lane 1) operate under complete, firewalled database, merchant processor, and payment gateway isolation from our clinical electronic health records (EHR) and therapy billing system at queerpathways.org (Lane 2). Outbound clicks to retail offerings are intercepted to guarantee zero cross-lane Protected Health Information (PHI) or financial data transversal.</p>,
         },
       ]}
+      showBookingCta={false}
+      trailingContact={<>Practice telephone: +1 (919) 219-1754</>}
     />
   );
 }

@@ -211,6 +211,18 @@ if (existsSync(join(root, 'netlify/functions'))) {
   failures.push('netlify/functions: retail serverless functions must not be deployed from the clinical repository');
 }
 
+const termsPage = readFileSync(join(root, 'pages/terms.tsx'), 'utf8');
+if (!termsPage.includes('+1 (919) 219-1754')) {
+  failures.push('pages/terms.tsx: required administrative telephone disclosure is missing');
+}
+
+for (const source of sources) {
+  if (source.path === 'pages/terms.tsx') continue;
+  if (/919[\s.)-]*219[\s.-]*1754/.test(source.content)) {
+    failures.push(`${source.path}: administrative telephone must appear only on pages/terms.tsx`);
+  }
+}
+
 if (failures.length > 0) {
   console.error('Compliance audit failed:\n');
   for (const failure of failures) console.error(`- ${failure}`);

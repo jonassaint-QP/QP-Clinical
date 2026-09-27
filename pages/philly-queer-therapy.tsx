@@ -11,7 +11,7 @@ export default function PhillyQueerTherapyPage() {
         { title: 'Pennsylvania Scope', body: <p>Clinical services are available by encrypted telehealth to eligible clients physically located in Pennsylvania at the time of care.</p> },
         { title: 'Specialist Pathways', body: <p>Care includes individual therapy, relationship therapy, intake assessment, and somatic scaffolding tailored to executive and sensory load.</p> },
       ]}
-      note="Clinical availability depends on fit, licensure scope, and the combined cross-jurisdiction capacity limit."
+      note="Clinical availability depends on fit, licensure scope, and the Pennsylvania capacity limit."
     />
   );
 }
