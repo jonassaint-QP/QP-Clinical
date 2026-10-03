@@ -53,7 +53,7 @@ export function InteriorPage({
               Hard cap of 7 specialist slots across Pennsylvania. Initial consultation pathways are offered within seven business days of inquiry, subject to jurisdiction and clinical fit.
             </p>
             <a href="/#therapy-notes-widget" className="btn-somatic-primary">
-              Adjourn the Courtroom — Book Your Intake Assessment
+              Adjourn the Courtroom, Book Your Intake Assessment
             </a>
           </aside>
         ) : null}

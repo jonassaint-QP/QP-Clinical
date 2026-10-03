@@ -48,7 +48,7 @@ export default function LandingPage() {
               onClick={scrollToBookingWidget}
               className="inline-block border-0 bg-[#D3B127] px-8 py-4 text-lg font-bold text-[#020501] shadow-lg transition-all duration-200 hover:bg-[#CBB26A] hover:shadow-[0_0_16px_rgba(203,178,106,0.4)]"
             >
-              Adjourn the Courtroom — Book Your Intake Assessment
+              Adjourn the Courtroom, Book Your Intake Assessment
             </button>
           </div>
 
