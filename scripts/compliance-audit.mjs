@@ -71,7 +71,7 @@ for (const source of sources) {
 const landingPath = join(root, 'pages/index.tsx');
 const landing = readFileSync(landingPath, 'utf8');
 const requiredLandingContent = [
-  'Adjourn the Courtroom — Book Your Intake Assessment',
+  'Adjourn the Courtroom, Book Your Intake Assessment',
   'Everyone thinks I\'m doing fine... but the truth is I\'m not alright.',
   'Ambiguity Tax',
   '/images/217059319_padded_logo.png',
@@ -198,7 +198,7 @@ if (!existsSync(emblemPath)) {
 const interiorPage = readFileSync(join(root, 'components/InteriorPage.tsx'), 'utf8');
 for (const required of [
   'Hard cap of 7 specialist slots across Pennsylvania.',
-  'Adjourn the Courtroom — Book Your Intake Assessment',
+  'Adjourn the Courtroom, Book Your Intake Assessment',
 ]) {
   if (!interiorPage.includes(required)) failures.push(`components/InteriorPage.tsx: missing shared requirement: ${required}`);
 }

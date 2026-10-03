@@ -51,7 +51,7 @@ export default function PhilosophyPage() {
 
         <div className="mt-12 text-center">
           <button type="button" onClick={scrollToBookingWidget} className="btn-somatic-primary text-lg">
-            Adjourn the Courtroom — Book Your Intake Assessment
+            Adjourn the Courtroom, Book Your Intake Assessment
           </button>
         </div>
       </div>
