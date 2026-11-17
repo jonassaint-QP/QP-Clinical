@@ -11,8 +11,8 @@ interface ClinicalShellProps {
   children: ReactNode;
 }
 
-const defaultTitle = 'Queer Pathways | Somatic Telehealth for the Double-Outsider';
-const defaultDescription = 'Somatic telehealth for neurodivergent, non-binary, and 2SLGBTQI+ professionals in Pennsylvania.';
+const defaultTitle = 'LGBTQ+ & Gay-Affirming Therapist in Philadelphia, PA | Telehealth | Queer Pathways';
+const defaultDescription = 'Affirming online therapy for gay, bi, trans, and queer adults in Philadelphia and across Pennsylvania.';
 
 export function ClinicalShell({
   title = defaultTitle,
@@ -68,10 +68,12 @@ export function ClinicalShell({
           </Link>
           <nav aria-label="Primary navigation" className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium">
             <Link href="/services" className={navigationClass('/services')} aria-current={router.pathname === '/services' ? 'page' : undefined}>Services</Link>
+            <Link href="/philly-queer-therapy" className={navigationClass('/philly-queer-therapy')} aria-current={router.pathname === '/philly-queer-therapy' ? 'page' : undefined}>Philadelphia</Link>
             <Link href="/philosophy" className={navigationClass('/philosophy')} aria-current={router.pathname === '/philosophy' ? 'page' : undefined}>Philosophy</Link>
             <Link href="/coaching" className={navigationClass('/coaching')} aria-current={router.pathname === '/coaching' ? 'page' : undefined}>Coaching</Link>
-            <Link href="/consultation" className={navigationClass('/consultation')} aria-current={router.pathname === '/consultation' ? 'page' : undefined}>Supervision</Link>
+            <Link href="/consultation" className={navigationClass('/consultation')} aria-current={router.pathname === '/consultation' ? 'page' : undefined}>DBT Supervision</Link>
             <Link href="/resources/library" className={navigationClass('/resources/library')} aria-current={router.pathname === '/resources/library' ? 'page' : undefined}>Library</Link>
+            <Link href="/blog" className={navigationClass('/blog')} aria-current={router.pathname === '/blog' ? 'page' : undefined}>Blog</Link>
             <a href="https://queerpathways.com" onClick={handleShopClick} className="font-semibold text-[#D3B127] transition-colors hover:underline">Storefront</a>
             <a
               href="https://www.therapyportal.com/p/queercharts/"

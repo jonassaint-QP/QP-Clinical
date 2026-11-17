@@ -13,8 +13,8 @@ export default function LandingPage() {
 
   return (
     <ClinicalShell
-      title="Queer Pathways | Somatic Telehealth for the Double-Outsider"
-      description="Somatic telehealth for neurodivergent, non-binary, and 2SLGBTQI+ professionals in Pennsylvania."
+      title="LGBTQ+ & Gay-Affirming Therapist in Philadelphia, PA | Telehealth | Queer Pathways"
+      description="Affirming online therapy for gay, bi, trans, and queer adults in Philadelphia and across Pennsylvania. Individual and couples therapy with Joshua Jonassaint, LCSW."
     >
         <div className="mx-auto max-w-5xl px-4 py-16 text-center">
           <div className="mb-6 flex justify-center">
@@ -32,11 +32,14 @@ export default function LandingPage() {
               "Everyone thinks I'm doing fine... but the truth is I'm not alright."
             </p>
           </div>
+          <p className="mb-3 text-xs font-bold uppercase tracking-wide text-[#D3B127]">
+            Somatic Sovereignty for the Double-Outsider
+          </p>
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-[#CBB26A] sm:text-5xl">
-            SOMATIC SOVEREIGNTY FOR THE DOUBLE-OUTSIDER
+            Queer &amp; Gay-Affirming Therapy in Philadelphia and Across Pennsylvania
           </h1>
           <p className="mb-8 text-lg leading-relaxed text-[#C0BFBC]">
-            We don't do sterile corporate wellness speak. We don't do clinical pathologizing. We build clinical architecture for survival, agency, and pleasure—specializing in 2SLGBTQI+ men, non-binary, and neurodivergent professionals navigating total identity-homelessness and chronic metabolic burnout across Pennsylvania.
+            We don't do sterile corporate wellness speak. We don't do clinical pathologizing. We build clinical architecture for survival, agency, and pleasure—specializing in gay, bi, and queer men, non-binary folks, and neurodivergent professionals navigating total identity-homelessness and chronic metabolic burnout across Pennsylvania. Individual and couples therapy by secure telehealth, from Philly to Pittsburgh.
           </p>
 
           <div className="mb-8 inline-block border border-[#3E6830] bg-[#0A1D08] px-4 py-2.5 text-xs tracking-wide text-[#CBB26A]">
