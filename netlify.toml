@@ -14,3 +14,30 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+
+# Old WordPress blog links (blog.queerpathways.org) keep their search ranking by
+# redirecting to the same post on the main site. These rules take effect once
+# blog.queerpathways.org is added to this Netlify site as a domain alias.
+[[redirects]]
+  from = "https://blog.queerpathways.org/somatic-reset-deep-healing-for-the-queer-body-3/*"
+  to = "https://queerpathways.org/blog/somatic-reset-deep-healing-for-the-queer-body"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://blog.queerpathways.org/"
+  to = "https://queerpathways.org/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://blog.queerpathways.org/:slug/*"
+  to = "https://queerpathways.org/blog/:slug"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://blog.queerpathways.org/*"
+  to = "https://queerpathways.org/blog"
+  status = 301
+  force = true
