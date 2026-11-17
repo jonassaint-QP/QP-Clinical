@@ -3,8 +3,8 @@ import { extname, join, relative, resolve } from 'node:path';
 import sharp from 'sharp';
 
 const root = resolve(import.meta.dirname, '..');
-const sourceRoots = ['pages', 'components', 'styles'];
-const extensions = new Set(['.css', '.ts', '.tsx']);
+const sourceRoots = ['pages', 'components', 'styles', 'lib', 'content'];
+const extensions = new Set(['.css', '.ts', '.tsx', '.md']);
 
 function collectFiles(directory) {
   if (!existsSync(directory)) return [];
@@ -122,7 +122,7 @@ const requiredPageContent = new Map([
   ['pages/philosophy.tsx', ["WE DON'T BELIEVE IN BROKEN", 'The Double-Outsider Framework', 'The Internal Courtroom', 'The Ambiguity Tax', 'What We Offer Instead']],
   ['pages/services.tsx', ['THREE PATHWAYS. ONE RADICAL PREMISE.', 'Specialist Scaffolding', 'Relational Sovereignty', 'Gender Story Prep', 'DIGNITY INVESTMENT PRICING', 'Direct superbill and invoice generation for client self-submission.']],
   ['pages/consultation.tsx', ['SUPERVISION: THE DBT CONSULTATION GROUP', 'The Focus', 'Format & Investment', '$75 USD per session', 'Joshua@QueerPathways.org']],
-  ['pages/resources/library.tsx', ['Latest from the blog', 'Sunday Somatic Reset Note', 'https://blog.queerpathways.org/sunday-somatic-reset-note/']],
+  ['pages/resources/library.tsx', ['Latest from the blog', 'Read the latest article', 'href="/blog"']],
   ['pages/coaching.tsx', ['The Internal Courtroom Audit Masterclass', 'Not therapy, and not a clinical service.', 'No insurance, and no superbills.', 'Clinical care is Pennsylvania-only.', 'Enquire about the masterclass']],
 ]);
 

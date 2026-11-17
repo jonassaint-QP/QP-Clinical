@@ -1,6 +1,18 @@
+import type { GetStaticProps } from 'next';
+import Link from 'next/link';
 import { InteriorPage } from '../../components/InteriorPage';
+import { getPostSummaries } from '../../lib/blog';
+import { formatPostDate, type PostSummary } from '../../lib/blog-types';
 
-export default function ResourceLibraryPage() {
+interface ResourceLibraryProps {
+  latestPost: PostSummary | null;
+}
+
+export const getStaticProps: GetStaticProps<ResourceLibraryProps> = async () => ({
+  props: { latestPost: getPostSummaries()[0] ?? null },
+});
+
+export default function ResourceLibraryPage({ latestPost }: ResourceLibraryProps) {
   return (
     <InteriorPage
       title="The Resource Library"
@@ -12,17 +24,19 @@ export default function ResourceLibraryPage() {
           title: 'Latest from the blog',
           body: (
             <div>
-              <p className="text-xs font-bold uppercase text-[#D3B127]">September 6, 2026</p>
-              <h3 className="mt-3 text-xl font-bold text-[#CBB26A]">Sunday Somatic Reset Note</h3>
-              <p className="mt-3">Radical acceptance usually begins in an ugly little moment.</p>
-              <a
-                href="https://blog.queerpathways.org/sunday-somatic-reset-note/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-block font-semibold text-[#D3B127] underline"
-              >
-                Read the latest article
-              </a>
+              {latestPost ? (
+                <>
+                  <p className="text-xs font-bold uppercase text-[#D3B127]">{formatPostDate(latestPost.date)}</p>
+                  <h3 className="mt-3 text-xl font-bold text-[#CBB26A]">{latestPost.title}</h3>
+                  <p className="mt-3">{latestPost.description}</p>
+                  <Link href={`/blog/${latestPost.slug}`} className="mt-4 inline-block font-semibold text-[#D3B127] underline">
+                    Read the latest article
+                  </Link>
+                </>
+              ) : null}
+              <p className="mt-4">
+                <Link href="/blog" className="font-semibold text-[#CCDEE0] underline">See every post on the blog</Link>
+              </p>
             </div>
           ),
         },
