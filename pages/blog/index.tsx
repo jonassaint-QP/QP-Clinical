@@ -11,8 +11,6 @@ const substackHome = 'https://queerpathways.substack.com/';
 const newsletterPosts = [
   { title: 'The Room Was the Point', date: 'November 4, 2026', href: 'https://queerpathways.substack.com/p/the-room-was-the-point' },
   { title: 'Take Me to Church, and the Lover Who Becomes the Pew', date: 'October 30, 2026', href: 'https://queerpathways.substack.com/p/take-me-to-church-and-the-lover-who' },
-  { title: 'What Happens to Desire After Chemsex', date: 'September 11, 2026', href: 'https://queerpathways.substack.com/p/what-happens-to-desire-after-chemsex' },
-  { title: 'Consent Before Contact', date: 'September 1, 2026', href: 'https://queerpathways.substack.com/p/consent-before-contact' },
   { title: 'The Dopamenu on a Boat: An ADHD Survival Guide for the Gay Cruise', date: 'August 11, 2026', href: 'https://queerpathways.substack.com/p/the-dopamenu-on-a-boat-an-adhd-survival' },
   { title: 'Whiskey Glasses and the Anatomy of Numbing', date: 'August 4, 2026', href: 'https://queerpathways.substack.com/p/whiskey-glasses-and-the-anatomy-of' },
 ];
