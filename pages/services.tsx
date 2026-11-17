@@ -7,13 +7,14 @@ export default function ServicesPage() {
 
   return (
     <ClinicalShell
-      title="Services & Pricing | Queer Pathways — Specialist Scaffolding"
-      description="Three pathways grounded in identity-fluent, kink-fluent, and neuro-affirming clinical scaffolding across Pennsylvania."
+      title="Individual & Couples Therapy for LGBTQ+ Adults in PA | Queer Pathways"
+      description="Telehealth individual and couples therapy for gay, bi, trans, and queer adults in Philadelphia and across Pennsylvania. Trauma, shame, ADHD, burnout, relationships, kink, and gender care."
     >
       <div className="mx-auto max-w-5xl px-4 py-16">
         <div className="mb-12 text-center">
           <h1 className="text-3xl font-extrabold tracking-tight text-[#CBB26A] sm:text-5xl">THREE PATHWAYS. ONE RADICAL PREMISE.</h1>
           <p className="mt-4 text-lg text-[#CCDEE0]">Your identity is not a problem to be managed. We build clinical care around the architecture you already have.</p>
+          <p className="mt-4 text-base text-[#C0BFBC]">Individual and couples therapy for gay, bi, trans, and queer adults in Philadelphia and anywhere in Pennsylvania, by secure telehealth. Common reasons people reach out: anxiety, depression, trauma, shame, coming out, relationship and couples issues, ADHD, and burnout.</p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
