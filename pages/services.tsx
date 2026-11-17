@@ -53,7 +53,7 @@ export default function ServicesPage() {
             ))}
           </div>
           <div className="mt-8 space-y-2 border-t border-[#3E6830] pt-6 text-xs text-[#C0BFBC]">
-            <p><strong className="text-[#CBB26A]">Insurance & Coverage:</strong> Direct superbill and invoice generation for client self-submission. In Pennsylvania, active in-network care is maintained with Aetna and Highmark BCBS via TherapyNotes.</p>
+            <p><strong className="text-[#CBB26A]">Insurance & Coverage:</strong> Direct superbill and invoice generation for client self-submission. In Pennsylvania, active in-network care is maintained with Aetna and Highmark BCBS via TherapyNotes. For other PPO plans, Thrizer handles out-of-network reimbursement so you don&apos;t have to file claims yourself.</p>
           </div>
         </section>
 
