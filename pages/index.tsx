@@ -83,7 +83,7 @@ export default function LandingPage() {
               DIGNITY INVESTMENT PRICING
             </h2>
             <p className="mb-2 text-center text-xs text-[#CCDEE0]">Rates locked through March 30, 2027</p>
-            <p className="mb-6 text-center text-sm font-semibold text-[#CBB26A]">In-network with Highmark Blue Cross Blue Shield in Pennsylvania. Superbills provided for out-of-network plans.</p>
+            <p className="mb-6 text-center text-sm font-semibold text-[#CBB26A]">In-network with Aetna and Highmark Blue Cross Blue Shield in Pennsylvania. Superbills provided for out-of-network plans.</p>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="border border-[#3E6830] bg-[#0A1D08] p-6 text-center">
                 <h3 className="font-bold text-[#CBB26A]">Intake Assessment</h3>
