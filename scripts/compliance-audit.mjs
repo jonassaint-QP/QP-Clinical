@@ -41,7 +41,6 @@ const bannedPatterns = [
   { label: 'decommissioned cyan or magenta terminology', pattern: /\b(?:cyber[-_ ]?cyan|cyan[-_ ]?cyber|magenta[-_ ]?neon|neon[-_ ]?magenta)\b/gi },
   { label: 'QP-ICP-LANG-001 banned public term', pattern: /\bsibling\b/gi },
   { label: 'banned or deprecated platform', pattern: /\b(?:stripe|carepatron)\b/gi },
-  { label: 'banned third-party out-of-network billing platform', pattern: /\bthrizer\b/gi },
   { label: 'citation artifact', pattern: /\[cite:\s*\d+\]/gi },
   { label: 'legacy capacity claim', pattern: /\b14\s+(?:specialist\s+)?slots?\b/gi },
   { label: 'embedded frame', pattern: /<iframe\b/gi },

@@ -82,7 +82,8 @@ export default function LandingPage() {
             <h2 className="mb-4 text-center text-3xl font-bold text-[#CBB26A]">
               DIGNITY INVESTMENT PRICING
             </h2>
-            <p className="mb-6 text-center text-xs text-[#CCDEE0]">Rates locked through March 30, 2027</p>
+            <p className="mb-2 text-center text-xs text-[#CCDEE0]">Rates locked through March 30, 2027</p>
+            <p className="mb-6 text-center text-sm font-semibold text-[#CBB26A]">In-network with Aetna and Highmark Blue Cross Blue Shield in Pennsylvania. Out-of-network? Thrizer handles your reimbursement, or we provide superbills.</p>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="border border-[#3E6830] bg-[#0A1D08] p-6 text-center">
                 <h3 className="font-bold text-[#CBB26A]">Intake Assessment</h3>
