@@ -4,9 +4,9 @@ export default function TermsPage() {
   return (
     <InteriorPage
       title="Queer Pathways LLC — Terms of Service & Clinical Scope"
-      description="Terms governing Queer Pathways clinical information, telehealth access, jurisdiction boundaries, and the separate adult retail storefront."
+      description="Terms governing Queer Pathways clinical information, telehealth access, and jurisdiction boundaries."
       eyebrow="Effective August 12, 2026"
-      introduction="These terms define the jurisdictional scope of Queer Pathways LLC's virtual clinical services, emergency limitations, and separation from the retail storefront."
+      introduction="These terms define the jurisdictional scope of Queer Pathways LLC's virtual clinical services, and emergency limitations."
       sections={[
         {
           title: 'Operating Entity & Contact',
@@ -32,10 +32,6 @@ export default function TermsPage() {
         {
           title: '4. Out-of-Network Reimbursement',
           body: <p>For out-of-network PPO insurance plans in Pennsylvania, we issue itemized superbills and insurance-ready invoices directly upon payment, enabling seamless self-submission for out-of-network reimbursement.</p>,
-        },
-        {
-          title: '5. Two-Lane Commercial & Clinical Separation (QP-POL-002)',
-          body: <p>E-commerce hardware transactions executed via our retail storefront at queerpathways.com (Lane 1) operate under complete, firewalled database, merchant processor, and payment gateway isolation from our clinical electronic health records (EHR) and therapy billing system at queerpathways.org (Lane 2). Outbound clicks to retail offerings are intercepted to guarantee zero cross-lane Protected Health Information (PHI) or financial data transversal.</p>,
         },
         {
           title: 'Records & Retention',
