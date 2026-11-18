@@ -4,9 +4,9 @@ export default function PrivacyPage() {
   return (
     <InteriorPage
       title="Notice of Privacy Practices"
-      description="HIPAA privacy notice describing encrypted clinical records, record retention and strict clinical-to-retail data isolation."
+      description="HIPAA privacy notice describing encrypted clinical records, record retention and how website data is handled."
       eyebrow="HIPAA • QP-POL-002"
-      introduction="Clinical information belongs in the encrypted clinical environment. The public site and retail storefront are not channels for transmitting treatment information."
+      introduction="Clinical information belongs in the encrypted clinical environment. The public website is not a channel for transmitting treatment information."
       sections={[
         { title: 'Clinical Records', body: <p>Clinical records are maintained within designated care systems and handled according to applicable Pennsylvania and United States privacy obligations.</p> },
         {
@@ -48,8 +48,7 @@ export default function PrivacyPage() {
             </div>
           ),
         },
-        { title: 'Retail Isolation', body: <p>Clinical information is not sent to retail databases. Retail customer data is not entered into the electronic health record.</p> },
-        { title: 'Website Data', body: <p>Routine hosting logs may process technical information needed for security and delivery. Do not place sensitive clinical details in general website or retail fields.</p> },
+        { title: 'Website Data', body: <p>Routine hosting logs may process technical information needed for security and delivery. Do not place sensitive clinical details in general website fields.</p> },
         { title: 'Out-of-Network Reimbursement', body: <p>For out-of-network PPO insurance plans in Pennsylvania, we issue itemized superbills and insurance-ready invoices directly upon payment, enabling self-submission for out-of-network reimbursement.</p> },
         {
           title: 'Privacy Requests',
