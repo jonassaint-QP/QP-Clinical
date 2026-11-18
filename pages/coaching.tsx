@@ -60,11 +60,11 @@ export default function CoachingPage() {
           ),
         },
         {
-          title: 'How to enquire',
+          title: 'How to book',
           body: (
             <div className="space-y-3">
-              <p>Send a short note describing what you want to work on and which session length you want. Availability is limited, and enquiries are answered in the order they arrive.</p>
-              <a href="mailto:jonassaint@queerpathways.org" className="inline-block font-bold text-[#D3B127] hover:underline">Enquire about the masterclass</a>
+              <p>Schedule a consultation through the secure TherapyNotes portal. Availability is limited, and consultations are booked in the order requests arrive.</p>
+              <a href="https://www.therapyportal.com/p/queercharts/" target="_blank" rel="noopener noreferrer" className="inline-block font-bold text-[#D3B127] hover:underline">Schedule a masterclass consultation</a>
             </div>
           ),
         },

@@ -121,7 +121,7 @@ const requiredPageContent = new Map([
   ['pages/services.tsx', ['THREE PATHWAYS. ONE RADICAL PREMISE.', 'Specialist Scaffolding', 'Relational Sovereignty', 'Gender Story Prep', 'DIGNITY INVESTMENT PRICING', 'Direct superbill and invoice generation for client self-submission.']],
   ['pages/consultation.tsx', ['SUPERVISION: THE DBT CONSULTATION GROUP', 'The Focus', 'Format & Investment', '$75 USD per session', 'Joshua@QueerPathways.org']],
   ['pages/resources/library.tsx', ['Latest from the blog', 'Read the latest article', 'href="/blog"']],
-  ['pages/coaching.tsx', ['The Internal Courtroom Audit Masterclass', 'Not therapy, and not a clinical service.', 'No insurance, and no superbills.', 'Clinical care is Pennsylvania-only.', 'Enquire about the masterclass']],
+  ['pages/coaching.tsx', ['The Internal Courtroom Audit Masterclass', 'Not therapy, and not a clinical service.', 'No insurance, and no superbills.', 'Clinical care is Pennsylvania-only.', 'Schedule a masterclass consultation']],
 ]);
 
 for (const [pagePath, requirements] of requiredPageContent) {
