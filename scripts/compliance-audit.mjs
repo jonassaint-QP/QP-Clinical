@@ -102,7 +102,6 @@ for (const required of [
   '/coaching',
   'Skip to main content',
   'id="main-content"',
-  "window.open('https://queerpathways.com', '_blank', 'noopener,noreferrer')",
 ]) {
   if (!clinicalShell.includes(required)) failures.push(`components/ClinicalShell.tsx: missing shared requirement: ${required}`);
 }
@@ -162,7 +161,6 @@ const requiredRoutes = [
   'privacy.tsx',
   'gfe.tsx',
   'memoir-disclaimer.tsx',
-  'shop.tsx',
   'resources/adhd-survival-guide.tsx',
   'resources/adhd-survival-card.tsx',
   'resources/glossary.tsx',
@@ -200,16 +198,6 @@ for (const required of [
   'Adjourn the Courtroom, Book Your Intake Assessment',
 ]) {
   if (!interiorPage.includes(required)) failures.push(`components/InteriorPage.tsx: missing shared requirement: ${required}`);
-}
-
-const modal = readFileSync(join(root, 'components/LeavesSiteModal.tsx'), 'utf8');
-const requiredModalCopy = "You're leaving the Queer Pathways clinical portal and heading to our retail storefront at";
-if (!modal.includes(requiredModalCopy) || !modal.includes('Your clinical data stays here. Browse freely.')) {
-  failures.push('components/LeavesSiteModal.tsx: required clinical-to-retail boundary copy is missing');
-}
-
-for (const required of ["event.key !== 'Tab'", 'element.inert = true', "element.setAttribute('aria-hidden', 'true')"]) {
-  if (!modal.includes(required)) failures.push(`components/LeavesSiteModal.tsx: missing modal accessibility requirement: ${required}`);
 }
 
 const documentSource = readFileSync(join(root, 'pages/_document.tsx'), 'utf8');

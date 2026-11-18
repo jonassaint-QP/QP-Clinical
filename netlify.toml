@@ -15,6 +15,12 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
 
+# The storefront page was removed; send old links home.
+[[redirects]]
+  from = "/shop"
+  to = "/"
+  status = 301
+
 # Old WordPress blog links (blog.queerpathways.org) keep their search ranking by
 # redirecting to the same post on the main site. These rules take effect once
 # blog.queerpathways.org is added to this Netlify site as a domain alias.

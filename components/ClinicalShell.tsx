@@ -2,8 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useState, type ReactNode, type MouseEvent } from 'react';
-import { LeavesSiteModal } from './LeavesSiteModal';
+import type { ReactNode } from 'react';
 
 interface ClinicalShellProps {
   title?: string;
@@ -19,18 +18,7 @@ export function ClinicalShell({
   description = defaultDescription,
   children,
 }: ClinicalShellProps) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
-
-  const handleShopClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    setIsModalOpen(true);
-  };
-
-  const handleConfirmRedirect = () => {
-    setIsModalOpen(false);
-    window.open('https://queerpathways.com', '_blank', 'noopener,noreferrer');
-  };
 
   const documentTitle = title.includes('Queer Pathways') ? title : `${title} | Queer Pathways`;
   const navigationClass = (pathname: string) =>
@@ -74,7 +62,6 @@ export function ClinicalShell({
             <Link href="/consultation" className={navigationClass('/consultation')} aria-current={router.pathname === '/consultation' ? 'page' : undefined}>DBT Supervision</Link>
             <Link href="/resources/library" className={navigationClass('/resources/library')} aria-current={router.pathname === '/resources/library' ? 'page' : undefined}>Library</Link>
             <Link href="/blog" className={navigationClass('/blog')} aria-current={router.pathname === '/blog' ? 'page' : undefined}>Blog</Link>
-            <a href="https://queerpathways.com" onClick={handleShopClick} className="font-semibold text-[#D3B127] transition-colors hover:underline">Storefront</a>
             <a
               href="https://www.therapyportal.com/p/queercharts/"
               target="_blank"
@@ -105,12 +92,6 @@ export function ClinicalShell({
           <p className="text-[10px] text-[#C0BFBC]/70">Operational Sovereignty Notice: Practice operates strictly via encrypted telehealth. Zero public physical practice addresses are maintained.</p>
         </div>
       </footer>
-
-      <LeavesSiteModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        onConfirm={handleConfirmRedirect}
-      />
     </div>
   );
 }
