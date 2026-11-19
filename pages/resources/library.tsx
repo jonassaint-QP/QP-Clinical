@@ -45,6 +45,10 @@ export default function ResourceLibraryPage({ latestPost }: ResourceLibraryProps
           body: (
             <ul className="space-y-5">
               <li>
+                <a href="/resources/safety-plan" className="font-bold text-[#D3B127] underline">My Safety Plan</a>
+                <p className="mt-1 text-sm text-[#C0BFBC]">A free, fillable worksheet for mapping your warning signs, coping steps, people, and crisis lines before a hard moment hits.</p>
+              </li>
+              <li>
                 <a href="/resources/adhd-survival-card" className="font-bold text-[#D3B127] underline">The ADHD Survival Card</a>
                 <p className="mt-1 text-sm text-[#C0BFBC]">A scannable reference for the neurodivergent, kink-affirming, and chronically overstimulated.</p>
               </li>
@@ -65,6 +69,12 @@ export default function ResourceLibraryPage({ latestPost }: ResourceLibraryProps
                 <p className="mt-1 text-sm text-[#C0BFBC]">The full set of resources, clinical notices and practice documents.</p>
               </li>
             </ul>
+          ),
+        },
+        {
+          title: 'If you need help right now',
+          body: (
+            <p>Call <strong>911</strong>, or call or text <strong>988</strong> for the Suicide &amp; Crisis Lifeline (US and Canada), any time, day or night. Queer Pathways does not provide 24/7 crisis support, and nothing in this library is a substitute for it.</p>
           ),
         },
         {
