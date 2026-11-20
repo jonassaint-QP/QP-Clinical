@@ -44,7 +44,13 @@ const bannedPatterns = [
   { label: 'citation artifact', pattern: /\[cite:\s*\d+\]/gi },
   { label: 'legacy capacity claim', pattern: /\b14\s+(?:specialist\s+)?slots?\b/gi },
   { label: 'embedded frame', pattern: /<iframe\b/gi },
-  { label: 'removed Ontario or Toronto reference', pattern: /\b(?:Ontario|Toronto)\b/gi },
+  {
+    label: 'removed Ontario or Toronto reference',
+    pattern: /\b(?:Ontario|Toronto)\b/gi,
+    // Book excerpts are narrative set partly in Toronto, not a description of the practice.
+    // Exempted with Joshua's approval on 2026-11-20. Clinical pages remain covered.
+    exemptPrefixes: ['content/book/'],
+  },
   { label: 'removed Ontario registration number', pattern: /\b842649\b/g },
   { label: 'removed practice phone number', pattern: /(?:\+?1[\s.-]*)?\(?365\)?[\s.-]*599[\s.-]*9002/g },
   {
@@ -55,6 +61,7 @@ const bannedPatterns = [
 
 for (const source of sources) {
   for (const rule of bannedPatterns) {
+    if (rule.exemptPrefixes?.some((prefix) => source.path.startsWith(prefix))) continue;
     const matches = source.content.match(rule.pattern);
     if (matches) failures.push(`${source.path}: ${rule.label}: ${[...new Set(matches)].join(', ')}`);
   }
