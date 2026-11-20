@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { ClinicalShell } from '../../components/ClinicalShell';
+import { LgbtqCrisisLines } from '../../components/LgbtqCrisisLines';
 
 const description =
   'A free, fillable safety plan from Queer Pathways. Write down your warning signs, coping steps, people, and crisis lines before a hard moment, so the plan is ready when you need it.';
@@ -35,6 +36,7 @@ export default function SafetyPlanPage() {
             <p className="mt-2 leading-relaxed">
               Call <strong>911</strong>, or call or text <strong>988</strong> for the Suicide &amp; Crisis Lifeline (US and Canada), any time, day or night. You can also go to your nearest emergency room. Queer Pathways does not provide 24/7 crisis support.
             </p>
+            <LgbtqCrisisLines />
           </aside>
 
           <p className="leading-relaxed text-[#C0BFBC]">
