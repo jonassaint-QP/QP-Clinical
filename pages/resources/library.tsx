@@ -1,6 +1,7 @@
 import type { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { InteriorPage } from '../../components/InteriorPage';
+import { LgbtqCrisisLines } from '../../components/LgbtqCrisisLines';
 import { getPostSummaries } from '../../lib/blog';
 import { formatPostDate, type PostSummary } from '../../lib/blog-types';
 import { getBook, getExcerptSummaries } from '../../lib/book';
@@ -101,7 +102,10 @@ export default function ResourceLibraryPage({ latestPost, book, excerptCount }: 
         {
           title: 'If you need help right now',
           body: (
-            <p>Call <strong>911</strong>, or call or text <strong>988</strong> for the Suicide &amp; Crisis Lifeline (US and Canada), any time, day or night. Queer Pathways does not provide 24/7 crisis support, and nothing in this library is a substitute for it.</p>
+            <>
+              <p>Call <strong>911</strong>, or call or text <strong>988</strong> for the Suicide &amp; Crisis Lifeline (US and Canada), any time, day or night. Queer Pathways does not provide 24/7 crisis support, and nothing in this library is a substitute for it.</p>
+              <LgbtqCrisisLines />
+            </>
           ),
         },
         {
