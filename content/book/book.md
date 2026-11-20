@@ -9,7 +9,11 @@ buyUrl:
 buyLabel:
 cover:
 coverAlt:
-draft: true
+draft: false
 ---
 
-A placeholder "about the book" goes here: two or three short paragraphs on what the book is, who it's for, and why it exists. Joshua will replace this with the real description.
+Alex is a creative director with an ADHD brain, a wall of degrees, and an inner critic they call the Auditor. When one missed deadline and one misgendering email set off an old spiral, Alex is left on the floor with a single question: what if there's another way?
+
+*Pathways to Presence* follows Alex through trauma, neurodivergence, desire, chosen family, and the long road into therapy. Along the way it gives names to things many queer people have felt their whole lives: the hum, the Auditor, the Internal Courtroom.
+
+Start with Chapter 1, "Noise," below.
