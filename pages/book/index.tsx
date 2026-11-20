@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { BookCover, BuyButton } from '../../components/BookCover';
 import { ClinicalShell } from '../../components/ClinicalShell';
 import { getBook, getExcerptSummaries } from '../../lib/book';
-import type { BookInfo, ExcerptSummary } from '../../lib/book-types';
+import { bookByline, type BookInfo, type ExcerptSummary } from '../../lib/book-types';
 
 interface BookPageProps {
   book: BookInfo;
@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps<BookPageProps> = async () => ({
 
 export default function BookPage({ book, excerpts }: BookPageProps) {
   const url = 'https://queerpathways.org/book';
-  const pageTitle = `${book.title}: Read Excerpts from the Book by Joshua Jonassaint, LCSW`;
+  const pageTitle = `${book.title}: Read Excerpts from the Book by ${book.author}`;
   const bookSchema = {
     '@context': 'https://schema.org',
     '@type': 'Book',
@@ -28,8 +28,8 @@ export default function BookPage({ book, excerpts }: BookPageProps) {
     ...(book.cover ? { image: `https://queerpathways.org${book.cover}` } : {}),
     author: {
       '@type': 'Person',
-      name: 'Joshua Jonassaint',
-      honorificSuffix: 'LCSW',
+      name: book.author,
+      ...(book.credentials ? { honorificSuffix: book.credentials } : {}),
       url: 'https://queerpathways.org/',
     },
     publisher: { '@type': 'Organization', name: 'Queer Pathways', url: 'https://queerpathways.org/' },
@@ -61,7 +61,7 @@ export default function BookPage({ book, excerpts }: BookPageProps) {
             <p className="mb-3 text-xs font-bold uppercase text-[#D3B127]">The book{book.status ? ` • ${book.status}` : ''}</p>
             <h1 className="text-3xl font-extrabold tracking-normal text-[#CBB26A] sm:text-4xl">{book.title}</h1>
             {book.subtitle ? <p className="mt-3 text-xl italic text-[#CCDEE0]">{book.subtitle}</p> : null}
-            <p className="mt-4 text-sm text-[#C0BFBC]">By Joshua Jonassaint, LCSW</p>
+            <p className="mt-4 text-sm text-[#C0BFBC]">By {bookByline(book)}</p>
             <div className="blog-prose mt-6" dangerouslySetInnerHTML={{ __html: book.aboutHtml }} />
             <div className="mt-8 flex flex-wrap gap-4">
               {excerpts.length > 0 ? (

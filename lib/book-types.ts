@@ -3,6 +3,8 @@
 export interface BookInfo {
   title: string;
   subtitle: string | null;
+  author: string;
+  credentials: string | null;
   description: string;
   status: string | null;
   buyUrl: string | null;
@@ -23,4 +25,8 @@ export interface ExcerptSummary {
 
 export interface Excerpt extends ExcerptSummary {
   html: string;
+}
+
+export function bookByline(book: Pick<BookInfo, 'author' | 'credentials'>) {
+  return book.credentials ? `${book.author}, ${book.credentials}` : book.author;
 }

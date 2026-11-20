@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { BookCover, BuyButton } from '../../components/BookCover';
 import { ClinicalShell } from '../../components/ClinicalShell';
 import { getAllExcerpts, getBook, getExcerptSummaries } from '../../lib/book';
-import type { BookInfo, Excerpt, ExcerptSummary } from '../../lib/book-types';
+import { bookByline, type BookInfo, type Excerpt, type ExcerptSummary } from '../../lib/book-types';
 
 interface ExcerptPageProps {
   book: BookInfo;
@@ -35,7 +35,7 @@ export default function ExcerptPage({ book, excerpt, next }: ExcerptPageProps) {
     description: excerpt.description,
     url,
     isPartOf: { '@type': 'Book', name: book.title, url: 'https://queerpathways.org/book' },
-    author: { '@type': 'Person', name: 'Joshua Jonassaint', honorificSuffix: 'LCSW', url: 'https://queerpathways.org/' },
+    author: { '@type': 'Person', name: book.author, ...(book.credentials ? { honorificSuffix: book.credentials } : {}), url: 'https://queerpathways.org/' },
   };
 
   return (
@@ -59,7 +59,7 @@ export default function ExcerptPage({ book, excerpt, next }: ExcerptPageProps) {
             {excerpt.chapter ? `${excerpt.chapter} • ` : ''}{book.title}
           </p>
           <h1 className="mb-4 text-3xl font-extrabold tracking-normal text-[#CBB26A] sm:text-4xl">{excerpt.title}</h1>
-          <p className="text-sm text-[#C0BFBC]">By Joshua Jonassaint, LCSW</p>
+          <p className="text-sm text-[#C0BFBC]">By {bookByline(book)}</p>
         </header>
 
         <div className="blog-prose" dangerouslySetInnerHTML={{ __html: excerpt.html }} />

@@ -1,7 +1,9 @@
 ---
-title: Working Title
-subtitle: A memoir
-description: Read excerpts from the new book by Joshua Jonassaint, LCSW, a queer therapist in Philadelphia, on shame, desire, and coming home to yourself.
+title: Pathways to Presence
+subtitle: Mapping the Queer Territory of Trauma, Neurodivergence, and Radical Self-Acceptance
+author: Joshua S. Jonassaint
+credentials: RSW, LCSW
+description: Read excerpts from Pathways to Presence, a book on queer trauma, neurodivergence, and radical self-acceptance by therapist Joshua S. Jonassaint.
 status: Coming soon
 buyUrl:
 buyLabel:

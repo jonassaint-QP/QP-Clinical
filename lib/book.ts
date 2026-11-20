@@ -13,6 +13,8 @@ export type { BookInfo, Excerpt, ExcerptSummary } from './book-types';
 // ---
 // title: Book title
 // subtitle: Optional subtitle
+// author: Name as printed on the book (defaults to Joshua Jonassaint)
+// credentials: Optional letters after the name in the byline, like LCSW
 // description: One or two sentences for Google and social previews (under 160 characters).
 // status: Optional line under the title, like "Coming spring 2027"
 // buyUrl: Optional link to buy, preorder, or join the waitlist
@@ -44,6 +46,8 @@ export function getBook(): BookInfo {
   return {
     title: fields.title,
     subtitle: fields.subtitle || null,
+    author: fields.author || 'Joshua Jonassaint',
+    credentials: fields.credentials || null,
     description: fields.description,
     status: fields.status || null,
     buyUrl: fields.buyUrl || null,

@@ -8,7 +8,7 @@ export function BookCover({ book, priority = false, compact = false }: { book: B
     return (
       <Image
         src={book.cover}
-        alt={book.coverAlt || `Cover of ${book.title} by Joshua Jonassaint`}
+        alt={book.coverAlt || `Cover of ${book.title} by ${book.author}`}
         width={400}
         height={600}
         priority={priority}
@@ -20,7 +20,7 @@ export function BookCover({ book, priority = false, compact = false }: { book: B
   return (
     <div
       role="img"
-      aria-label={`${book.title} by Joshua Jonassaint`}
+      aria-label={`${book.title} by ${book.author}`}
       className={`flex aspect-[2/3] w-full flex-col justify-between border-4 border-double border-[#CBB26A] bg-[#153009] text-center shadow-lg ${compact ? 'p-2' : 'p-6'}`}
     >
       <p className={`font-bold uppercase text-[#D3B127] ${compact ? 'text-[7px]' : 'text-[10px] tracking-widest'}`}>Queer Pathways</p>
@@ -28,7 +28,7 @@ export function BookCover({ book, priority = false, compact = false }: { book: B
         <p className={`font-extrabold leading-tight text-[#CBB26A] ${compact ? 'text-sm' : 'text-2xl'}`}>{book.title}</p>
         {book.subtitle ? <p className={`italic text-[#CCDEE0] ${compact ? 'mt-1 text-[9px]' : 'mt-3 text-sm'}`}>{book.subtitle}</p> : null}
       </div>
-      <p className={`font-semibold uppercase text-[#C0BFBC] ${compact ? 'text-[7px]' : 'text-xs tracking-wider'}`}>Joshua Jonassaint</p>
+      <p className={`font-semibold uppercase text-[#C0BFBC] ${compact ? 'text-[7px]' : 'text-xs tracking-wider'}`}>{book.author}</p>
     </div>
   );
 }
