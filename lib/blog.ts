@@ -19,9 +19,9 @@ export type { Post, PostSummary } from './blog-types';
 
 const postsDirectory = join(process.cwd(), 'content/blog');
 
-function parseFrontMatter(source: string) {
+export function parseFrontMatter(source: string) {
   const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
-  if (!match) throw new Error('Blog post is missing its front matter block.');
+  if (!match) throw new Error('Markdown file is missing its front matter block.');
 
   const fields: Record<string, string> = {};
   for (const line of match[1].split(/\r?\n/)) {
