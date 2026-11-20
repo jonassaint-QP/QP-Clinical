@@ -3,16 +3,27 @@ import Link from 'next/link';
 import { InteriorPage } from '../../components/InteriorPage';
 import { getPostSummaries } from '../../lib/blog';
 import { formatPostDate, type PostSummary } from '../../lib/blog-types';
+import { getBook, getExcerptSummaries } from '../../lib/book';
+import { bookByline, type BookInfo } from '../../lib/book-types';
 
 interface ResourceLibraryProps {
   latestPost: PostSummary | null;
+  book: BookInfo | null;
+  excerptCount: number;
 }
 
 export const getStaticProps: GetStaticProps<ResourceLibraryProps> = async () => ({
-  props: { latestPost: getPostSummaries()[0] ?? null },
+  props: (() => {
+    const book = getBook();
+    return {
+      latestPost: getPostSummaries()[0] ?? null,
+      book: book.draft ? null : book,
+      excerptCount: book.draft ? 0 : getExcerptSummaries().length,
+    };
+  })(),
 });
 
-export default function ResourceLibraryPage({ latestPost }: ResourceLibraryProps) {
+export default function ResourceLibraryPage({ latestPost, book, excerptCount }: ResourceLibraryProps) {
   return (
     <InteriorPage
       title="The Resource Library"
@@ -20,6 +31,22 @@ export default function ResourceLibraryPage({ latestPost }: ResourceLibraryProps
       eyebrow="Queer Pathways resource library"
       introduction="This curated set of approved educational resources and reflection tools is for 2SLGBTQI+ men, non-binary people, neurodivergent professionals, and anyone building a life with less translation."
       sections={[
+        ...(book
+          ? [{
+              title: 'The book: read the excerpts',
+              body: (
+                <div>
+                  <h3 className="text-xl font-bold text-[#CBB26A]">{book.title}</h3>
+                  {book.subtitle ? <p className="mt-2 italic text-[#CCDEE0]">{book.subtitle}</p> : null}
+                  <p className="mt-2 text-xs text-[#C0BFBC]">By {bookByline(book)}</p>
+                  <p className="mt-3">{book.description}</p>
+                  <Link href="/book" className="mt-4 inline-block font-semibold text-[#D3B127] underline">
+                    {excerptCount > 0 ? 'Start reading the excerpts' : 'About the book'}
+                  </Link>
+                </div>
+              ),
+            }]
+          : []),
         {
           title: 'Latest from the blog',
           body: (
