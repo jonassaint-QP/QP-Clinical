@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import { ClinicalShell } from '../components/ClinicalShell';
 
 // Headshot for the About Me section. Drop the photo into public/images/ and set src
@@ -10,13 +9,6 @@ const headshot = {
   alt: 'Joshua Jonassaint, LCSW, therapist at Queer Pathways',
 };
 
-const aboutFacts = [
-  { label: 'License', value: 'Licensed Clinical Social Worker (LCSW), Pennsylvania License CW023073' },
-  { label: 'Education', value: 'MSW, Rutgers University' },
-  { label: 'Experience', value: '12+ years of clinical practice' },
-  { label: 'Sessions', value: 'Secure telehealth anywhere in Pennsylvania, from Philly to Pittsburgh' },
-  { label: 'Insurance', value: 'In-network with Aetna and Highmark BCBS. Out-of-network plans through Thrizer.' },
-];
 
 const personJsonLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -32,8 +24,9 @@ const personJsonLd = JSON.stringify({
     'Therapy for gay and bisexual men',
     'Dialectical Behavior Therapy (DBT)',
     'Trauma-informed therapy',
+    'Emotionally Focused Therapy (EFT)',
+    'Substance use and chemsex',
     'Couples therapy',
-    'Sex therapy',
     'ADHD and neurodivergence',
   ],
   areaServed: { '@type': 'State', name: 'Pennsylvania' },
@@ -92,8 +85,8 @@ export default function PhilosophyPage() {
 
           <div id="about" className="scroll-mt-24 border border-[#3E6830] bg-[#153009] p-8 shadow-xl">
             <h2 className="mb-6 text-2xl font-bold text-[#CBB26A]">About Me</h2>
-            <div className="flex flex-col gap-8 md:flex-row md:items-start">
-              <div className="mx-auto w-48 shrink-0 md:mx-0">
+            <div className="mb-10 flex justify-center">
+              <div className="w-48">
                 {headshot.src ? (
                   <Image
                     src={headshot.src}
@@ -115,24 +108,87 @@ export default function PhilosophyPage() {
                 )}
                 <p className="mt-3 text-center text-sm font-semibold text-[#CCDEE0]">Joshua Jonassaint, LCSW</p>
               </div>
-
-              <div className="space-y-4 leading-relaxed text-[#C0BFBC]">
-                <p className="text-lg font-semibold text-[#CCDEE0]">Hi, I&apos;m Joshua. Welcome in.</p>
-                <p>I&apos;m the therapist behind Queer Pathways, and I&apos;ve spent more than twelve years doing this work. When you book here, you work with me directly. No rotating intake team, and no re-explaining your whole life to a new face every few months.</p>
-                <p>I work with gay, bi, trans, and queer adults, and especially with queer men and neurodivergent folks who are exhausted from performing for an invisible audience. If you scan every room for exits, mask until you crash, and re-litigate every text you send, you&apos;re in the right place. Kink, polyamory and ENM, sex work, chemsex, ADHD, autism: none of it needs a disclaimer in my office.</p>
-                <p>My toolbox includes DBT skills (I also run a <Link href="/consultation" className="font-semibold text-[#D3B127] hover:underline">DBT consultation group</Link> for other therapists), trauma-focused and somatic work, emotionally focused couples work, mindfulness, and sex therapy. I also provide gender-affirming surgery assessments, on your timeline and without the gatekeeping.</p>
-                <p>Outside of sessions, I write. My book, <Link href="/book" className="font-semibold text-[#D3B127] hover:underline">Pathways to Presence</Link>, is on the way, and I post regularly on <Link href="/blog" className="font-semibold text-[#D3B127] hover:underline">the blog</Link>. Fair warning: I&apos;m warm, I&apos;m direct, and I curse sometimes. If that sounds like your kind of therapist, let&apos;s talk.</p>
+            </div>
+            <div className="space-y-10 leading-relaxed text-[#C0BFBC]">
+            <div>
+              <h3 className="mb-4 text-xl font-bold text-[#CBB26A]">How I got here</h3>
+              <div className="space-y-4">
+                <p>The first person to call me a social worker was my mother, even though she wasn&apos;t one on paper.</p>
+                <p>She was always opening our home to people. Whoever needed a place, a meal, or someone to talk to found their way to her. She did the work of a social worker without ever having the title.</p>
+                <p>I watched her do it, and honestly, it scared me. I saw how much she gave. I didn&apos;t want that for myself.</p>
+                <p>But in high school, it started happening to me anyway. People kept telling me things. Not because I could fix anything. I couldn&apos;t. They told me because I listened, and they could feel that I was really hearing them.</p>
+                <p>So I tried to go another way. In undergrad I studied recreation therapy. In grad school I went into recreation management. For my thesis, I studied bathhouses and sexually transmitted infections among gay men and men who have sex with men.</p>
+                <p>I wanted to include trans men in that study, and I wasn&apos;t able to. That stayed with me. It&apos;s part of why I make room for the people that research and therapy so often leave out.</p>
+                <p>My grad advisor read my work and said, &quot;This isn&apos;t recreation. This is social work.&quot;</p>
+                <p>I finished that degree anyway. But my advisor&apos;s words stuck with me, along with everyone else who had called me a social worker long before I was ready to hear it. At the end of my grad program, I finally listened. I went to social work school.</p>
+                <p>So social work doesn&apos;t feel like a job to me. It&apos;s not what I do. It&apos;s who I am. I think I got that from my mom.</p>
               </div>
             </div>
-
-            <dl className="mt-8 grid gap-4 border-t border-[#3E6830] pt-6 text-sm sm:grid-cols-2">
-              {aboutFacts.map((fact) => (
-                <div key={fact.label}>
-                  <dt className="font-bold uppercase tracking-wide text-[#D3B127]">{fact.label}</dt>
-                  <dd className="mt-1 text-[#C0BFBC]">{fact.value}</dd>
-                </div>
-              ))}
-            </dl>
+            <div>
+              <h3 className="mb-4 text-xl font-bold text-[#CBB26A]">Why double outsiders</h3>
+              <div className="space-y-4">
+                <p>I&apos;m queer, Black, non-binary, and neurodivergent. I know what it&apos;s like to be on the outside. And I know what it&apos;s like to be on the outside in more than one way at once.</p>
+                <p>When you carry more than one of these, the stress stacks up. You might not feel fully at home in the queer world, or in your own culture, or anywhere. That&apos;s what I mean by a double outsider. I&apos;m not writing about it from far away. I live it.</p>
+                <p>I&apos;m a therapist because there&apos;s a huge gap in care for people like us. Too often, a queer client pays for an hour of therapy and spends it teaching. Explaining their relationships. Their sex life. Their family. Their brain. Their words for who they are. That&apos;s the Ambiguity Tax, and you shouldn&apos;t have to pay it in my office.</p>
+                <p>With me, you don&apos;t start by explaining yourself. You start where you actually are.</p>
+                <p>Gay men hold a special place in my life and my work. But my door is open to all queer lives.</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-4 text-xl font-bold text-[#CBB26A]">Substance use</h3>
+              <div className="space-y-4">
+                <p>Substance use has been part of my work from the start.</p>
+                <p>In undergrad, I did my recreation therapy internship at a substance use treatment center. In grad school, while I studied recreation management, I worked at a substance use treatment center. And in social work school, my internship was at one too. Almost all of my training happened in substance use care.</p>
+                <p>I still do this work today. I see people at every stage:</p>
+                <ul className="list-disc space-y-2 pl-6">
+                  <li>People who are using right now and aren&apos;t sure they want to stop</li>
+                  <li>People who are thinking about quitting</li>
+                  <li>People who are in recovery</li>
+                </ul>
+                <p>That includes chemsex. Nothing here needs a disclaimer.</p>
+                <p>You don&apos;t have to live a sober life to work with me. I understand use. Every behavior we have serves us in some way. We do it because we think it will make life better. And every behavior has a cost. So together, we look at it: Is the cost worth paying? Sometimes it is. I get that.</p>
+                <p>One thing I do ask: come to session sober. If you show up high or drunk, I&apos;ll end the session. That&apos;s not a punishment. It&apos;s the standard of care, and you just won&apos;t get much out of therapy that way. We&apos;ll pick it back up next time.</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-4 text-xl font-bold text-[#CBB26A]">What it&apos;s like to work with me</h3>
+              <div className="space-y-4">
+                <p>I&apos;m warm, I&apos;m direct, and I curse sometimes. I try to filter it, but every once in a while it slips out.</p>
+                <p>Being direct means you&apos;ll never have to guess what I&apos;m thinking. If I notice something, I&apos;ll say it: &quot;Here&apos;s what I&apos;m seeing. Here&apos;s what I&apos;m thinking.&quot; No hidden notes, no poker face. You won&apos;t have to wonder what I think of you, because I&apos;ll tell you.</p>
+                <p>Our first session starts simple. I&apos;ll ask something like, &quot;What brings you here?&quot; And then we talk. I don&apos;t have a list of questions to get through.</p>
+                <p>Clients tell me I&apos;m a good listener. A lot of what I do is be a sounding board. You talk, and I tell you back what I&apos;m hearing, honestly and without judgment. Sometimes hearing your own thoughts from someone else is what finally makes them make sense.</p>
+                <p>Sometimes I&apos;ll suggest homework. It&apos;s really just an exercise we talked about in session. Whether you do it is up to you. If you&apos;d like to talk about it next time, great. If not, that&apos;s fine too. I won&apos;t put you on the spot or make you feel bad for forgetting. We&apos;ll just keep moving.</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-4 text-xl font-bold text-[#CBB26A]">Credentials and training</h3>
+              <div className="space-y-4">
+                <ul className="list-disc space-y-2 pl-6">
+                  <li>LCSW, Pennsylvania (CW023073)</li>
+                  <li>MSW, Rutgers University</li>
+                  <li>10+ years in practice</li>
+                  <li>Dialectical Behavior Therapy (DBT), certificate of completion. DBT builds skills for strong emotions, stress, and relationships.</li>
+                  <li>Emotionally Focused Therapy (EFT), Externship completed through the International Centre for Excellence in Emotionally Focused Therapy (ICEEFT). EFT helps people understand the feelings and needs underneath their closest relationships.</li>
+                  <li>Trauma-informed, with coursework in Eye Movement Desensitization and Reprocessing (EMDR), Internal Family Systems (IFS), and other trauma approaches</li>
+                </ul>
+                <p><strong className="text-[#CCDEE0]">A note on trauma.</strong> I&apos;m trauma-informed, not a trauma specialist. I work with the everyday, ongoing kinds of trauma: the slow, wearing hurt of growing up different, being misread, or never quite fitting. If you&apos;re dealing with a recent or severe trauma, I&apos;ll refer you to a trauma therapist I know and trust. When that work is done, you&apos;re welcome back with me, and we&apos;ll keep going with the rest of your life.</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-4 text-xl font-bold text-[#CBB26A]">A little about me</h3>
+              <div className="space-y-4">
+                <p>Living with neurodivergence has always been a bit of a mess, and honestly, it still is. The two places I feel most at ease are in session, where I know exactly what I need to focus on, and at home, when I know there&apos;s nothing left to do but relax.</p>
+                <p>I don&apos;t have pets. I have a plant, a Monstera deliciosa.</p>
+                <p>And I don&apos;t cry, not in real life. Unless I&apos;m watching Grey&apos;s Anatomy. Then I can&apos;t stop, even if I&apos;ve seen the episode five times.</p>
+              </div>
+            </div>
+            </div>
+            <div className="mt-10 border-t border-[#3E6830] pt-8 text-center">
+              <p className="mb-6 text-lg font-semibold text-[#CCDEE0]">If any of this sounds like you, I&apos;d like to meet you.</p>
+              <button type="button" onClick={scrollToBookingWidget} className="btn-somatic-primary">
+                Book your intake assessment
+              </button>
+            </div>
           </div>
         </section>
 
