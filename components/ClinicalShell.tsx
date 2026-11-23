@@ -59,7 +59,7 @@ export function ClinicalShell({
             <Link href="/philly-queer-therapy" className={navigationClass('/philly-queer-therapy')} aria-current={router.pathname === '/philly-queer-therapy' ? 'page' : undefined}>Philadelphia</Link>
             <Link href="/philosophy" className={navigationClass('/philosophy')} aria-current={router.pathname === '/philosophy' ? 'page' : undefined}>Philosophy</Link>
             <Link href="/coaching" className={navigationClass('/coaching')} aria-current={router.pathname === '/coaching' ? 'page' : undefined}>Coaching</Link>
-            <Link href="/consultation" className={navigationClass('/consultation')} aria-current={router.pathname === '/consultation' ? 'page' : undefined}>DBT Supervision</Link>
+            <Link href="/consultation" className={navigationClass('/consultation')} aria-current={router.pathname === '/consultation' ? 'page' : undefined}>Supervision</Link>
             <Link href="/resources/library" className={navigationClass('/resources/library')} aria-current={router.pathname === '/resources/library' ? 'page' : undefined}>Library</Link>
             <Link href="/blog" className={navigationClass('/blog')} aria-current={router.pathname === '/blog' ? 'page' : undefined}>Blog</Link>
             <a
