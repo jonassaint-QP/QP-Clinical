@@ -3,12 +3,12 @@ import { ClinicalShell } from '../components/ClinicalShell';
 export default function SupervisionPage() {
   return (
     <ClinicalShell
-      title="Individual DBT Consultation & Supervision | Queer Pathways"
+      title="Individual Consultation & Supervision | Queer Pathways"
       description="One-on-one DBT consultation and supervision for licensed therapists working with 2SLGBTQI+ and neurodivergent adults."
     >
       <div className="mx-auto max-w-4xl px-4 py-16">
         <div className="mb-10 text-center">
-          <h1 className="text-3xl font-extrabold tracking-tight text-[#CBB26A] sm:text-4xl">SUPERVISION: INDIVIDUAL DBT CONSULTATION</h1>
+          <h1 className="text-3xl font-extrabold tracking-tight text-[#CBB26A] sm:text-4xl">SUPERVISION: INDIVIDUAL CONSULTATION</h1>
           <p className="mt-4 text-lg text-[#CCDEE0]">For licensed therapists who want to deepen their Dialectical Behavior Therapy practice in a space that understands queer and neurodivergent adults.</p>
         </div>
 
