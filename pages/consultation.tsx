@@ -3,17 +3,17 @@ import { ClinicalShell } from '../components/ClinicalShell';
 export default function SupervisionPage() {
   return (
     <ClinicalShell
-      title="DBT Consultation Group & Supervision | Queer Pathways"
-      description="Professional peer consultation and DBT training for licensed therapists working with 2SLGBTQI+ and neurodivergent adults."
+      title="Individual DBT Consultation & Supervision | Queer Pathways"
+      description="One-on-one DBT consultation and supervision for licensed therapists working with 2SLGBTQI+ and neurodivergent adults."
     >
       <div className="mx-auto max-w-4xl px-4 py-16">
         <div className="mb-10 text-center">
-          <h1 className="text-3xl font-extrabold tracking-tight text-[#CBB26A] sm:text-4xl">SUPERVISION: THE DBT CONSULTATION GROUP</h1>
+          <h1 className="text-3xl font-extrabold tracking-tight text-[#CBB26A] sm:text-4xl">SUPERVISION: INDIVIDUAL DBT CONSULTATION</h1>
           <p className="mt-4 text-lg text-[#CCDEE0]">For licensed therapists who want to deepen their Dialectical Behavior Therapy practice in a space that understands queer and neurodivergent adults.</p>
         </div>
 
         <div className="mb-10 border border-[#3E6830] bg-[#153009] p-8 shadow-xl">
-          <p className="text-base leading-relaxed text-[#C0BFBC]">This is not a beginner training. It is a rigorous consultation group for clinicians who want to refine their skills, sharpen case conceptualization, and work effectively with clients who have been failed by cookie-cutter modalities.</p>
+          <p className="text-base leading-relaxed text-[#C0BFBC]">This is not a beginner training. It is rigorous one-on-one consultation for clinicians who want to refine their skills, sharpen case conceptualization, and work effectively with clients who have been failed by cookie-cutter modalities.</p>
         </div>
 
         <section className="space-y-8">
@@ -24,22 +24,22 @@ export default function SupervisionPage() {
               <li>Adapting DBT and somatic frameworks for neurodivergent presentations, executive dysfunction, and masking burnout.</li>
               <li>Navigating complex intersectional dynamics, kink-fluent care, and relational diversity without pathologizing the client's life.</li>
               <li>Managing therapist burnout, secondary trauma, and the internal regulation required to hold high-acuity spaces.</li>
-              <li>Case consultation and peer accountability rooted in non-judgmental, dialectical stances.</li>
+              <li>Case consultation and professional accountability rooted in non-judgmental, dialectical stances.</li>
             </ul>
           </div>
 
           <div className="border border-[#3E6830] bg-[#153009] p-8 shadow-2xl">
             <h2 className="mb-6 text-2xl font-bold text-[#CBB26A]">Format & Investment</h2>
             <div className="grid gap-6 text-center sm:grid-cols-3">
-              <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Group Format</h3><p className="mt-2 text-xs text-[#C0BFBC]">Live virtual consultation sessions for licensed clinicians</p></div>
+              <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Individual Format</h3><p className="mt-2 text-xs text-[#C0BFBC]">Live one-on-one virtual consultations for licensed clinicians</p></div>
               <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Investment</h3><p className="mt-2 text-xs font-bold text-[#D3B127]">$75 USD per session</p></div>
-              <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Eligibility</h3><p className="mt-2 text-xs text-[#C0BFBC]">Licensed external therapists seeking peer consultation</p></div>
+              <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Eligibility</h3><p className="mt-2 text-xs text-[#C0BFBC]">Licensed external therapists seeking individual consultation</p></div>
             </div>
           </div>
         </section>
 
         <div className="mt-12 border-t border-[#3E6830] pt-8 text-center">
-          <p className="mb-4 text-sm text-[#CCDEE0]">To join the consultation track, reach out directly to Joshua Jonassaint, LCSW:</p>
+          <p className="mb-4 text-sm text-[#CCDEE0]">To book individual consultation, reach out directly to Joshua Jonassaint, LCSW:</p>
           <a href="mailto:Joshua@QueerPathways.org" className="btn-somatic-secondary inline-block font-bold">Contact Joshua@QueerPathways.org</a>
         </div>
       </div>
