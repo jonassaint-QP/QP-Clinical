@@ -94,3 +94,25 @@ export function getExcerptSummaries(): ExcerptSummary[] {
 export function getExcerpt(slug: string): Excerpt | null {
   return getAllExcerpts().find((excerpt) => excerpt.slug === slug) ?? null;
 }
+
+// Standalone readings from the book that live in the Resource Library rather than the
+// /book excerpt sequence. Same front matter as an excerpt (order is ignored).
+// content/book/readings/<slug>.md is read by a page under pages/resources/.
+const readingsDirectory = join(bookDirectory, 'readings');
+
+export function getBookReading(slug: string): Excerpt {
+  const fileName = `${slug}.md`;
+  const { fields, body } = parseFrontMatter(readFileSync(join(readingsDirectory, fileName), 'utf8'));
+  for (const required of ['title', 'description']) {
+    if (!fields[required]) throw new Error(`content/book/readings/${fileName}: missing "${required}" in front matter.`);
+  }
+
+  return {
+    slug,
+    title: fields.title,
+    description: fields.description,
+    chapter: fields.chapter || null,
+    order: 0,
+    html: marked.parse(body, { async: false }) as string,
+  };
+}
