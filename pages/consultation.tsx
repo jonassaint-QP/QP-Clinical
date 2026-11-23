@@ -13,7 +13,7 @@ export default function SupervisionPage() {
         </div>
 
         <div className="mb-10 border border-[#3E6830] bg-[#153009] p-8 shadow-xl">
-          <p className="text-base leading-relaxed text-[#C0BFBC]">This is not a beginner training. It is rigorous one-on-one consultation for clinicians who want to refine their skills, sharpen case conceptualization, and work effectively with clients who have been failed by cookie-cutter modalities.</p>
+          <p className="text-base leading-relaxed text-[#C0BFBC]">This is not a beginner training. It is rigorous one-on-one consultation for clinicians who want to refine their skills, sharpen case conceptualization, and work effectively with clients who have been failed by cookie-cutter modalities. It is also open to social workers in Pennsylvania, such as LSWs working toward their LCSW, who need clinical supervision hours toward licensure.</p>
         </div>
 
         <section className="space-y-8">
@@ -33,7 +33,7 @@ export default function SupervisionPage() {
             <div className="grid gap-6 text-center sm:grid-cols-3">
               <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Individual Format</h3><p className="mt-2 text-xs text-[#C0BFBC]">Live one-on-one virtual consultations for licensed clinicians</p></div>
               <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Investment</h3><p className="mt-2 text-xs font-bold text-[#D3B127]">$75 USD per session</p><p className="mt-2 text-xs text-[#C0BFBC]">Bringing your own group of clinicians? Group rates can be negotiated on request.</p></div>
-              <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Eligibility</h3><p className="mt-2 text-xs text-[#C0BFBC]">Licensed external therapists seeking individual consultation</p></div>
+              <div className="border border-[#3E6830] bg-[#0A1D08] p-4"><h3 className="text-sm font-bold text-[#CBB26A]">Eligibility</h3><p className="mt-2 text-xs text-[#C0BFBC]">Licensed therapists seeking individual consultation, and Pennsylvania social workers earning supervision hours toward licensure</p></div>
             </div>
           </div>
         </section>
