@@ -92,10 +92,10 @@ export default function PhilosophyPage() {
                   <Image
                     src={headshot.src}
                     alt={headshot.alt}
-                    width={640}
-                    height={800}
+                    width={703}
+                    height={812}
                     sizes="256px"
-                    className="h-80 w-64 border-2 border-[#CBB26A] object-cover"
+                    className="h-auto w-64 border-2 border-[#CBB26A]"
                   />
                 ) : (
                   <div className="flex h-80 w-64 items-center justify-center border-2 border-[#3E6830] bg-[#0A1D08]">
@@ -120,10 +120,14 @@ export default function PhilosophyPage() {
                 <p>I watched her do it, and honestly, it scared me. I saw how much she gave. I didn&apos;t want that for myself.</p>
                 <p>But in high school, it started happening to me anyway. People kept telling me things. Not because I could fix anything. I couldn&apos;t. They told me because I listened, and they could feel that I was really hearing them.</p>
                 <p>So I tried to go another way. In undergrad I studied recreation therapy. In grad school I went into recreation management. For my thesis, I studied bathhouses and sexually transmitted infections among gay men and men who have sex with men.</p>
-                <p>I wanted to include trans men in that study, and I wasn&apos;t able to. That stayed with me. It&apos;s part of why I make room for the people that research and therapy so often leave out.</p>
+                <p>I wanted to include trans men in that study, and I wasn&apos;t able to. That stayed with me. It&apos;s part of why I make room for the people who research and therapy so often leave out.</p>
                 <p>My grad advisor read my work and said, &quot;This isn&apos;t recreation. This is social work.&quot;</p>
                 <p>I finished that degree anyway. But my advisor&apos;s words stuck with me, along with everyone else who had called me a social worker long before I was ready to hear it. At the end of my grad program, I finally listened. I went to social work school.</p>
                 <p>So social work doesn&apos;t feel like a job to me. It&apos;s not what I do. It&apos;s who I am. I think I got that from my mom.</p>
+                <p>What I do is therapy, and I don&apos;t take that lightly. It&apos;s a responsibility. When we work together, I&apos;m building a professional relationship with you, one you can lean on for support.</p>
+                <p>After social work school, I spent nine years in hospital psychiatry: six with teens, and three with people of all ages. I worked with people living with some of the most serious mental health conditions, like schizophrenia, bipolar disorder, major depression, borderline personality disorder, and severe anxiety. I sat with people having thoughts of suicide, thoughts of hurting others, and active psychosis.</p>
+                <p>That shapes how I show up now. Hard thoughts don&apos;t scare me. If you tell me something heavy, I won&apos;t flinch or panic. I&apos;ll stay with you, and we&apos;ll figure out together what you need.</p>
+                <p>For the last three years, I&apos;ve worked in outpatient therapy with queer people and queer couples. That&apos;s where you&apos;ll find me now.</p>
               </div>
             </div>
             <div>
@@ -143,20 +147,29 @@ export default function PhilosophyPage() {
                 <p>In undergrad, I did my recreation therapy internship at a substance use treatment center. In grad school, while I studied recreation management, I worked at a substance use treatment center. And in social work school, my internship was at one too. Almost all of my training happened in substance use care.</p>
                 <p>I still do this work today. I see people at every stage:</p>
                 <ul className="list-disc space-y-2 pl-6">
-                  <li>People who are using right now and aren&apos;t sure they want to stop</li>
-                  <li>People who are thinking about quitting</li>
-                  <li>People who are in recovery</li>
+                  <li>People who are <strong className="text-[#CCDEE0]">using right now</strong> and aren&apos;t sure they want to stop</li>
+                  <li>People who are <strong className="text-[#CCDEE0]">thinking about quitting</strong></li>
+                  <li>People who are <strong className="text-[#CCDEE0]">in recovery</strong></li>
                 </ul>
                 <p>That includes chemsex. Nothing here needs a disclaimer.</p>
-                <p>You don&apos;t have to live a sober life to work with me. I understand use. Every behavior we have serves us in some way. We do it because we think it will make life better. And every behavior has a cost. So together, we look at it: Is the cost worth paying? Sometimes it is. I get that.</p>
-                <p>One thing I do ask: come to session sober. If you show up high or drunk, I&apos;ll end the session. That&apos;s not a punishment. It&apos;s the standard of care, and you just won&apos;t get much out of therapy that way. We&apos;ll pick it back up next time.</p>
+                <p>You don&apos;t have to live a sober life to work with me. I understand use, and the choices behind it. Every behavior we have serves us in some way. We do it because we think it will make life better. And every behavior has a cost. So together, we look at it: Is the cost worth paying? Sometimes it is. I get that.</p>
+                <p>One thing I do ask: come to the session sober. If you show up high or drunk, I&apos;ll end the session. That&apos;s not a punishment. It&apos;s the standard of care, and you just won&apos;t get much out of therapy that way. We&apos;ll pick it back up next session.</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-4 text-xl font-bold text-[#CBB26A]">Couples and relationships</h3>
+              <div className="space-y-4">
+                <p>Most of the couples I see have at least one partner with ADHD or autism. When two brains work differently, love can start to feel like a constant mix-up. One of you feels ignored. The other feels nagged. Neither of you is the problem. You&apos;re just wired differently, and no one ever showed you how to bridge that.</p>
+                <p>This is where I use Emotionally Focused Therapy (EFT) the most. We slow things down and look at the feelings and needs underneath the fights, so you can find your way back to each other.</p>
+                <p>I also welcome polyamorous relationships, with three or more partners. Your relationship is yours to design. You won&apos;t have to defend its shape in my office.</p>
+                <p>One rule in couples work: I don&apos;t keep secrets between partners. Anything you tell me may be shared with your partner or partners. If someone misses a session, I&apos;ll start the next one by asking what questions they have, and I&apos;ll ask the rest of you to answer as honestly as you can. If something important gets left out, I&apos;ll fill in the gaps. Everyone in the relationship should be able to trust what happens in the room.</p>
               </div>
             </div>
             <div>
               <h3 className="mb-4 text-xl font-bold text-[#CBB26A]">What it&apos;s like to work with me</h3>
               <div className="space-y-4">
                 <p>I&apos;m warm, I&apos;m direct, and I curse sometimes. I try to filter it, but every once in a while it slips out.</p>
-                <p>Being direct means you&apos;ll never have to guess what I&apos;m thinking. If I notice something, I&apos;ll say it: &quot;Here&apos;s what I&apos;m seeing. Here&apos;s what I&apos;m thinking.&quot; No hidden notes, no poker face. You won&apos;t have to wonder what I think of you, because I&apos;ll tell you.</p>
+                <p>Being direct means you&apos;ll never have to guess what I&apos;m thinking. If I notice something, I&apos;ll say it: <em>&quot;Here&apos;s what I&apos;m seeing. Here&apos;s what I&apos;m thinking.&quot;</em> No hidden notes, no poker face. You won&apos;t have to wonder what I think of you, because I&apos;ll tell you.</p>
                 <p>Our first session starts simple. I&apos;ll ask something like, &quot;What brings you here?&quot; And then we talk. I don&apos;t have a list of questions to get through.</p>
                 <p>Clients tell me I&apos;m a good listener. A lot of what I do is be a sounding board. You talk, and I tell you back what I&apos;m hearing, honestly and without judgment. Sometimes hearing your own thoughts from someone else is what finally makes them make sense.</p>
                 <p>Sometimes I&apos;ll suggest homework. It&apos;s really just an exercise we talked about in session. Whether you do it is up to you. If you&apos;d like to talk about it next time, great. If not, that&apos;s fine too. I won&apos;t put you on the spot or make you feel bad for forgetting. We&apos;ll just keep moving.</p>
@@ -166,14 +179,17 @@ export default function PhilosophyPage() {
               <h3 className="mb-4 text-xl font-bold text-[#CBB26A]">Credentials and training</h3>
               <div className="space-y-4">
                 <ul className="list-disc space-y-2 pl-6">
-                  <li>LCSW, Pennsylvania (CW023073)</li>
-                  <li>MSW, Rutgers University</li>
-                  <li>10+ years in practice</li>
-                  <li>Dialectical Behavior Therapy (DBT), certificate of completion. DBT builds skills for strong emotions, stress, and relationships.</li>
-                  <li>Emotionally Focused Therapy (EFT), Externship completed through the International Centre for Excellence in Emotionally Focused Therapy (ICEEFT). EFT helps people understand the feelings and needs underneath their closest relationships.</li>
-                  <li>Trauma-informed, with coursework in Eye Movement Desensitization and Reprocessing (EMDR), Internal Family Systems (IFS), and other trauma approaches</li>
+                  <li><strong className="text-[#CCDEE0]">LCSW</strong>, Pennsylvania (CW023073)</li>
+                  <li><strong className="text-[#CCDEE0]">MSW</strong>, Rutgers University (Graduated May 2014)</li>
+                  <li><strong className="text-[#CCDEE0]">10+ years</strong> in practice</li>
+                  <li><strong className="text-[#CCDEE0]">9 years in hospital psychiatry</strong>: 6 years in adolescent psychiatry and 3 years working with people of all ages</li>
+                  <li><strong className="text-[#CCDEE0]">3 years in outpatient therapy</strong> with queer individuals and couples</li>
+                  <li><strong className="text-[#CCDEE0]">Dialectical Behavior Therapy (DBT)</strong>, certificate of completion. DBT builds skills for strong emotions, stress, and relationships.</li>
+                  <li><strong className="text-[#CCDEE0]">Emotionally Focused Therapy (EFT)</strong>, Externship completed through the International Centre for Excellence in Emotionally Focused Therapy (ICEEFT). EFT helps people understand the feelings and needs underneath their closest relationships.</li>
+                  <li><strong className="text-[#CCDEE0]">Trauma-informed</strong>, with coursework in Eye Movement Desensitization and Reprocessing (EMDR), Internal Family Systems (IFS), and other trauma approaches</li>
                 </ul>
-                <p><strong className="text-[#CCDEE0]">A note on trauma.</strong> I&apos;m trauma-informed, not a trauma specialist. I work with the everyday, ongoing kinds of trauma: the slow, wearing hurt of growing up different, being misread, or never quite fitting. If you&apos;re dealing with a recent or severe trauma, I&apos;ll refer you to a trauma therapist I know and trust. When that work is done, you&apos;re welcome back with me, and we&apos;ll keep going with the rest of your life.</p>
+                <p><strong className="text-[#CCDEE0]">A note on trauma.</strong> I&apos;m trauma-informed, not a trauma specialist. I work with the everyday, ongoing kinds of trauma: the slow, wearing hurt of growing up different, being misread, or never quite fitting.</p>
+                <p>I&apos;ve worked in every level of care, from hospitals to rehab to outpatient therapy, and I respect the people who do that work. So if you need more than weekly therapy can give, I&apos;ll help you get there. That might be crisis care for thoughts of suicide or psychosis, a substance use program, or a trauma specialist. Whatever it is, my goal is the same: get you the right care, so you can come back and we can keep working together.</p>
               </div>
             </div>
             <div>
@@ -181,12 +197,12 @@ export default function PhilosophyPage() {
               <div className="space-y-4">
                 <p>Living with neurodivergence has always been a bit of a mess, and honestly, it still is. The two places I feel most at ease are in session, where I know exactly what I need to focus on, and at home, when I know there&apos;s nothing left to do but relax.</p>
                 <p>I don&apos;t have pets. I have a plant, a Monstera deliciosa.</p>
-                <p>And I don&apos;t cry, not in real life. Unless I&apos;m watching Grey&apos;s Anatomy. Then I can&apos;t stop, even if I&apos;ve seen the episode five times.</p>
+                <p>And I don&apos;t cry, not in real life. Unless I&apos;m watching <em>Grey&apos;s Anatomy</em>. Then I can&apos;t stop, even if I&apos;ve seen the episode five times.</p>
               </div>
             </div>
             </div>
             <div className="mt-10 border-t border-[#3E6830] pt-8 text-center">
-              <p className="mb-6 text-lg font-semibold text-[#CCDEE0]">If any of this sounds like you, I&apos;d like to meet you.</p>
+              <p className="mb-6 text-lg font-semibold text-[#CCDEE0]">If you think we&apos;d work well together, I&apos;d love to meet you. And if I&apos;m not the right fit, I&apos;ll gladly help you find someone who is.</p>
               <button type="button" onClick={scrollToBookingWidget} className="btn-somatic-primary">
                 Book your intake assessment
               </button>
