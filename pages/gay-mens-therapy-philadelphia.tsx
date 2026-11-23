@@ -96,7 +96,7 @@ export default function GayMensTherapyPage() {
         <section className="mt-12 border border-[#3E6830] bg-[#153009] p-6 sm:p-8">
           <h2 className="mb-4 text-2xl font-bold text-[#CBB26A]">How We Work Together</h2>
           <p className="mb-4 text-sm leading-relaxed text-[#C0BFBC]">
-            Sessions are with Joshua Jonassaint, LCSW, and draw on DBT skills, trauma-focused and somatic work, and sex therapy, adapted for queer bodies and queer lives. Individual sessions are 50 minutes. Couples and relationship sessions are available too.
+            Sessions are with Joshua Jonassaint, LCSW, and draw on DBT skills, trauma-informed and somatic work, and sex therapy, adapted for queer bodies and queer lives. Individual sessions are 50 minutes. Couples and relationship sessions are available too.
           </p>
           <p className="text-sm leading-relaxed text-[#C0BFBC]">
             Want to read first? Start with{' '}
