@@ -77,6 +77,10 @@ export default function ResourceLibraryPage({ latestPost, book, excerptCount }: 
                 <p className="mt-1 text-sm text-[#C0BFBC]">A free, fillable worksheet for mapping your warning signs, coping steps, people, and crisis lines before a hard moment hits.</p>
               </li>
               <li>
+                <a href="/resources/radical-acceptance" className="font-bold text-[#D3B127] underline">Radical acceptance, a first look: this is my brain</a>
+                <p className="mt-1 text-sm text-[#C0BFBC]">A short DBT read from Pathways to Presence on making peace with your ADHD, autistic, or AuDHD brain, with a one-breath practice to try right now.</p>
+              </li>
+              <li>
                 <a href="/resources/adhd-survival-card" className="font-bold text-[#D3B127] underline">The ADHD Survival Card</a>
                 <p className="mt-1 text-sm text-[#C0BFBC]">A scannable reference for the neurodivergent, kink-affirming, and chronically overstimulated.</p>
               </li>
