@@ -5,8 +5,8 @@ import { ClinicalShell } from '../components/ClinicalShell';
 // Headshot for the About Me section. Drop the photo into public/images/ and set src
 // (for example '/images/joshua-jonassaint-headshot.jpg'). Until then the emblem shows instead.
 const headshot = {
-  src: '',
-  alt: 'Joshua Jonassaint, LCSW, therapist at Queer Pathways',
+  src: '/images/joshua-jonassaint-headshot.jpg',
+  alt: 'Joshua Jonassaint, LCSW, smiling in a tan suit on a balcony above a crowded Pride march with rainbow flags',
 };
 
 
@@ -16,6 +16,7 @@ const personJsonLd = JSON.stringify({
   name: 'Joshua Jonassaint',
   honorificSuffix: 'LCSW',
   jobTitle: 'Licensed Clinical Social Worker',
+  image: 'https://queerpathways.org/images/joshua-jonassaint-headshot.jpg',
   url: 'https://queerpathways.org/philosophy#about',
   worksFor: { '@type': 'Organization', name: 'Queer Pathways', url: 'https://queerpathways.org' },
   alumniOf: { '@type': 'CollegeOrUniversity', name: 'Rutgers University' },
@@ -86,17 +87,18 @@ export default function PhilosophyPage() {
           <div id="about" className="scroll-mt-24 border border-[#3E6830] bg-[#153009] p-8 shadow-xl">
             <h2 className="mb-6 text-2xl font-bold text-[#CBB26A]">About Me</h2>
             <div className="mb-10 flex justify-center">
-              <div className="w-48">
+              <div className="w-64">
                 {headshot.src ? (
                   <Image
                     src={headshot.src}
                     alt={headshot.alt}
-                    width={384}
-                    height={480}
-                    className="h-60 w-48 border-2 border-[#CBB26A] object-cover"
+                    width={640}
+                    height={800}
+                    sizes="256px"
+                    className="h-80 w-64 border-2 border-[#CBB26A] object-cover"
                   />
                 ) : (
-                  <div className="flex h-60 w-48 items-center justify-center border-2 border-[#3E6830] bg-[#0A1D08]">
+                  <div className="flex h-80 w-64 items-center justify-center border-2 border-[#3E6830] bg-[#0A1D08]">
                     <Image
                       src="/images/217059319_padded_logo.png"
                       alt="Queer Pathways emblem"
