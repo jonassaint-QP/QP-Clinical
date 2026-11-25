@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 const resources = [
 { title: 'My Safety Plan', description: 'A free, fillable worksheet for mapping your warning signs, coping steps, people, and crisis lines. In danger right now? Call 911, or call or text 988.', href: '/resources/safety-plan', label: 'Fillable worksheet' },
+{ title: 'Queer Pathways DBT Workbook: the free TL;DR edition', description: 'DBT skills for queer and trans people with ADHD, autism, or both, five pages or less per chapter, with a worksheet for each one.', href: '/resources/dbt-workbook', label: 'Free workbook (PDF)' },
 { title: 'Radical acceptance, a first look: this is my brain', description: 'A short DBT read from Pathways to Presence on making peace with your ADHD, autistic, or AuDHD brain, with a one-breath practice to try right now.', href: '/resources/radical-acceptance', label: 'DBT reading' },
 { title: 'The ADHD Survival Card', description: 'A scannable reference for the neurodivergent, kink-affirming, and chronically overstimulated.', href: '/resources/adhd-survival-card', label: 'Downloadable reference' },
 { title: 'The Thriving Ten', description: 'Practical systems for Double-Outsider lives beyond moral effort.', href: '/resources/thriving-ten-rules', label: 'Practice framework' },
