@@ -69,6 +69,7 @@ export default function DbtWorkbookPage() {
             <ul className="list-disc space-y-2 pl-5 text-[#C0BFBC]">
               <li>The book is written for ages 18 to 25, with notes for readers under 18 along the way.</li>
               <li>A few sections about sex, kink, and drugs are marked 18+. They are about safety and harm reduction, without judgment.</li>
+              <li>Want to print the worksheets on their own? <a href="/resources/dbt-workbook-worksheets" className="font-semibold text-[#D3B127] underline">Get them free, one chapter at a time</a>.</li>
               <li>Want the stories, the research, and every worksheet? The full workbook and the worksheet book are coming soon.</li>
               <li>Clients, bring it to session. We can work through it together.</li>
             </ul>
