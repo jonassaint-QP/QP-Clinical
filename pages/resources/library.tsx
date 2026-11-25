@@ -77,6 +77,10 @@ export default function ResourceLibraryPage({ latestPost, book, excerptCount }: 
                 <p className="mt-1 text-sm text-[#C0BFBC]">A free, fillable worksheet for mapping your warning signs, coping steps, people, and crisis lines before a hard moment hits.</p>
               </li>
               <li>
+                <a href="/resources/dbt-workbook" className="font-bold text-[#D3B127] underline">Queer Pathways DBT Workbook: the free TL;DR edition</a>
+                <p className="mt-1 text-sm text-[#C0BFBC]">DBT skills for queer and trans people with ADHD, autism, or both, five pages or less per chapter, with a worksheet for each one.</p>
+              </li>
+              <li>
                 <a href="/resources/radical-acceptance" className="font-bold text-[#D3B127] underline">Radical acceptance, a first look: this is my brain</a>
                 <p className="mt-1 text-sm text-[#C0BFBC]">A short DBT read from Pathways to Presence on making peace with your ADHD, autistic, or AuDHD brain, with a one-breath practice to try right now.</p>
               </li>
